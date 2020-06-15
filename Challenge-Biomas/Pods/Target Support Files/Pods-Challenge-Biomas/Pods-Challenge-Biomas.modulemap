@@ -1,0 +1,6 @@
+framework module Pods_Challenge_Biomas {
+  umbrella header "Pods-Challenge-Biomas-umbrella.h"
+
+  export *
+  module * { export * }
+}
