@@ -3,10 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38AAB50A2498FF5900118F7C /* InfoDesmatamentoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AAB5092498FF5900118F7C /* InfoDesmatamentoViewController.swift */; };
+		38AAB50E249907E400118F7C /* InfoTextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AAB50D249907E400118F7C /* InfoTextTableViewCell.swift */; };
+		38AAB51024991E5000118F7C /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AAB50F24991E5000118F7C /* Section.swift */; };
+		38AAB512249A542900118F7C /* TableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AAB511249A542900118F7C /* TableViewHeader.swift */; };
 		9535C0838D86404BB6B116EA /* Pods_Challenge_Biomas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFAFE054F302C7C768660AA0 /* Pods_Challenge_Biomas.framework */; };
 		CEAC8B892492B70E0066F793 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAC8B882492B70E0066F793 /* AppDelegate.swift */; };
 		CEAC8B8B2492B70E0066F793 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAC8B8A2492B70E0066F793 /* SceneDelegate.swift */; };
@@ -16,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		38AAB5092498FF5900118F7C /* InfoDesmatamentoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoDesmatamentoViewController.swift; sourceTree = "<group>"; };
+		38AAB50D249907E400118F7C /* InfoTextTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTextTableViewCell.swift; sourceTree = "<group>"; };
+		38AAB50F24991E5000118F7C /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		38AAB511249A542900118F7C /* TableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewHeader.swift; sourceTree = "<group>"; };
 		3F326CF5C020A776C505FA94 /* Pods-Challenge-Biomas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Challenge-Biomas.debug.xcconfig"; path = "Target Support Files/Pods-Challenge-Biomas/Pods-Challenge-Biomas.debug.xcconfig"; sourceTree = "<group>"; };
 		C194753F0142012AC9BDB982 /* Pods-Challenge-Biomas.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Challenge-Biomas.release.xcconfig"; path = "Target Support Files/Pods-Challenge-Biomas/Pods-Challenge-Biomas.release.xcconfig"; sourceTree = "<group>"; };
 		CEAC8B852492B70E0066F793 /* Challenge-Biomas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Challenge-Biomas.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,13 +56,39 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		38AAB5062498FE7400118F7C /* model */ = {
+			isa = PBXGroup;
+			children = (
+				38AAB50F24991E5000118F7C /* Section.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		38AAB5072498FE8300118F7C /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				CEAC8B8C2492B70E0066F793 /* MapViewController.swift */,
+				38AAB5092498FF5900118F7C /* InfoDesmatamentoViewController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		38AAB5082498FE8F00118F7C /* view */ = {
+			isa = PBXGroup;
+			children = (
+				CEAC8B932492B7130066F793 /* LaunchScreen.storyboard */,
+				38AAB50D249907E400118F7C /* InfoTextTableViewCell.swift */,
+				38AAB511249A542900118F7C /* TableViewHeader.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		B3E92B04336A95A1912B6238 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				3F326CF5C020A776C505FA94 /* Pods-Challenge-Biomas.debug.xcconfig */,
 				C194753F0142012AC9BDB982 /* Pods-Challenge-Biomas.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -81,9 +115,10 @@
 			children = (
 				CEAC8B882492B70E0066F793 /* AppDelegate.swift */,
 				CEAC8B8A2492B70E0066F793 /* SceneDelegate.swift */,
-				CEAC8B8C2492B70E0066F793 /* MapViewController.swift */,
+				38AAB5082498FE8F00118F7C /* view */,
+				38AAB5072498FE8300118F7C /* controller */,
+				38AAB5062498FE7400118F7C /* model */,
 				CEAC8B912492B7130066F793 /* Assets.xcassets */,
-				CEAC8B932492B7130066F793 /* LaunchScreen.storyboard */,
 				CEAC8B962492B7130066F793 /* Info.plist */,
 			);
 			path = "Challenge-Biomas";
@@ -203,9 +238,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38AAB50A2498FF5900118F7C /* InfoDesmatamentoViewController.swift in Sources */,
 				CEAC8B8D2492B70E0066F793 /* MapViewController.swift in Sources */,
 				CEAC8B892492B70E0066F793 /* AppDelegate.swift in Sources */,
+				38AAB51024991E5000118F7C /* Section.swift in Sources */,
 				CEAC8B8B2492B70E0066F793 /* SceneDelegate.swift in Sources */,
+				38AAB50E249907E400118F7C /* InfoTextTableViewCell.swift in Sources */,
+				38AAB512249A542900118F7C /* TableViewHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
