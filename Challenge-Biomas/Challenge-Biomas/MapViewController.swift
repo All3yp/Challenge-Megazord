@@ -296,9 +296,13 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         print("Clicked")
 
     }
+    
 
     @objc func buttonActionInfo(sender: UIButton!) {
         print("Clicked")
+        let vc = LegendasViewController()
+        vc.modalPresentationStyle = .custom
+        present(vc, animated: true, completion: nil)
 
     }
 
