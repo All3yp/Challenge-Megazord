@@ -11,6 +11,8 @@ import MapKit
 
 class MapViewController: UIViewController, MKMapViewDelegate {
     
+    
+    
     // declara os botoes como propriedades lazy var antes do viewdidload
     lazy var buttonsBackgroundView: UIView = {
         let view = UIView()
@@ -77,47 +79,56 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         //        print("Clicked")
         //    }
         
-        func setupButtons() {
-            self.view.addSubview(buttonsBackgroundView)
-            self.buttonsBackgroundView.addSubview(infoButton)
-            self.buttonsBackgroundView.addSubview(arrowButton)
-            self.buttonsBackgroundView.clipsToBounds = true
-            
-            self.buttonsBackgroundView.translatesAutoresizingMaskIntoConstraints = false
-            self.infoButton.translatesAutoresizingMaskIntoConstraints = false
-            self.arrowButton.translatesAutoresizingMaskIntoConstraints = false
-            
-            NSLayoutConstraint.activate([
-                self.infoButton.widthAnchor.constraint(equalToConstant: 50),
-                self.infoButton.heightAnchor.constraint(equalToConstant: 50),
-                self.infoButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -25),
-                self.infoButton.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 50),
-                
-                self.arrowButton.widthAnchor.constraint(equalToConstant: 50),
-                self.arrowButton.heightAnchor.constraint(equalToConstant: 50),
-                self.arrowButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -25),
-                self.arrowButton.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 100),
-                
-                self.buttonsBackgroundView.widthAnchor.constraint(equalToConstant: 50),
-                self.buttonsBackgroundView.heightAnchor.constraint(equalToConstant: 100),
-                self.buttonsBackgroundView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 50),
-                self.buttonsBackgroundView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -25)
-                
-                
-            ])
-        }
-        
         setupButtons()
+
+    }
+    
+    func setupButtons() {
+        self.view.addSubview(buttonsBackgroundView)
+        self.buttonsBackgroundView.addSubview(infoButton)
+        self.buttonsBackgroundView.addSubview(arrowButton)
+        self.buttonsBackgroundView.clipsToBounds = true
         
-        func didReceiveMemoryWarning() {
-            super.didReceiveMemoryWarning()
-            
-        }
+        self.buttonsBackgroundView.translatesAutoresizingMaskIntoConstraints = false
+        self.infoButton.translatesAutoresizingMaskIntoConstraints = false
+        self.arrowButton.translatesAutoresizingMaskIntoConstraints = false
         
-        func viewWillAppear(_ animated: Bool) {
-            super.viewWillAppear(animated)
+        infoButton.addTarget(self, action: #selector(merda(_:)), for: .touchUpInside)
+        
+        NSLayoutConstraint.activate([
+            self.infoButton.widthAnchor.constraint(equalToConstant: 50),
+            self.infoButton.heightAnchor.constraint(equalToConstant: 50),
+            self.infoButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -25),
+            self.infoButton.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 50),
             
-        }
+            self.arrowButton.widthAnchor.constraint(equalToConstant: 50),
+            self.arrowButton.heightAnchor.constraint(equalToConstant: 50),
+            self.arrowButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -25),
+            self.arrowButton.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 100),
+            
+            self.buttonsBackgroundView.widthAnchor.constraint(equalToConstant: 50),
+            self.buttonsBackgroundView.heightAnchor.constraint(equalToConstant: 100),
+            self.buttonsBackgroundView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 50),
+            self.buttonsBackgroundView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -25)
+        ])
         
     }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+    }
+    
+    @objc func merda(_ sender: UIButton) {
+        let vc = LegendasViewController()
+        vc.modalPresentationStyle = .custom
+        present(vc, animated: true, completion: nil)
+    }
+    
+    
 }

@@ -7,18 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE9D8F2824997CBC006D86BA /* LegendasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9D8F2724997CBC006D86BA /* LegendasViewController.swift */; };
+		CE9D8F2C249AC546006D86BA /* LegendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9D8F2B249AC546006D86BA /* LegendView.swift */; };
 		CEAC8B892492B70E0066F793 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAC8B882492B70E0066F793 /* AppDelegate.swift */; };
 		CEAC8B8B2492B70E0066F793 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAC8B8A2492B70E0066F793 /* SceneDelegate.swift */; };
-		CEAC8B8D2492B70E0066F793 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAC8B8C2492B70E0066F793 /* MapViewController.swift */; };
+		CEAC8B8D2492B70E0066F793 /* DESATUALIZADOMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAC8B8C2492B70E0066F793 /* DESATUALIZADOMapViewController.swift */; };
 		CEAC8B922492B7130066F793 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEAC8B912492B7130066F793 /* Assets.xcassets */; };
 		CEAC8B952492B7130066F793 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEAC8B932492B7130066F793 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE9D8F2724997CBC006D86BA /* LegendasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegendasViewController.swift; sourceTree = "<group>"; };
+		CE9D8F2B249AC546006D86BA /* LegendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegendView.swift; sourceTree = "<group>"; };
 		CEAC8B852492B70E0066F793 /* Challenge-Biomas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Challenge-Biomas.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEAC8B882492B70E0066F793 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEAC8B8A2492B70E0066F793 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CEAC8B8C2492B70E0066F793 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		CEAC8B8C2492B70E0066F793 /* DESATUALIZADOMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DESATUALIZADOMapViewController.swift; sourceTree = "<group>"; };
 		CEAC8B912492B7130066F793 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEAC8B942492B7130066F793 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEAC8B962492B7130066F793 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,7 +60,9 @@
 			children = (
 				CEAC8B882492B70E0066F793 /* AppDelegate.swift */,
 				CEAC8B8A2492B70E0066F793 /* SceneDelegate.swift */,
-				CEAC8B8C2492B70E0066F793 /* MapViewController.swift */,
+				CEAC8B8C2492B70E0066F793 /* DESATUALIZADOMapViewController.swift */,
+				CE9D8F2724997CBC006D86BA /* LegendasViewController.swift */,
+				CE9D8F2B249AC546006D86BA /* LegendView.swift */,
 				CEAC8B912492B7130066F793 /* Assets.xcassets */,
 				CEAC8B932492B7130066F793 /* LaunchScreen.storyboard */,
 				CEAC8B962492B7130066F793 /* Info.plist */,
@@ -134,8 +140,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEAC8B8D2492B70E0066F793 /* MapViewController.swift in Sources */,
+				CEAC8B8D2492B70E0066F793 /* DESATUALIZADOMapViewController.swift in Sources */,
+				CE9D8F2824997CBC006D86BA /* LegendasViewController.swift in Sources */,
 				CEAC8B892492B70E0066F793 /* AppDelegate.swift in Sources */,
+				CE9D8F2C249AC546006D86BA /* LegendView.swift in Sources */,
 				CEAC8B8B2492B70E0066F793 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
