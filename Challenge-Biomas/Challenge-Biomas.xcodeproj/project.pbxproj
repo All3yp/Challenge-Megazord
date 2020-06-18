@@ -14,9 +14,11 @@
 		3A0D1191249A90D100672983 /* BioPoints.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 3A0D1190249A5A4F00672983 /* BioPoints.geojson */; };
 		3A0D1198249B0F4900672983 /* EstateArtwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0D1197249B0F4900672983 /* EstateArtwork.swift */; };
 		3A0D119B249B920700672983 /* EstatePoints.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 3A0D1199249B7B0800672983 /* EstatePoints.geojson */; };
+		CE9D8F2824997CBC006D86BA /* LegendasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9D8F2724997CBC006D86BA /* LegendasViewController.swift */; };
+		CE9D8F2C249AC546006D86BA /* LegendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9D8F2B249AC546006D86BA /* LegendView.swift */; };
+		CE9D8F2E249BB297006D86BA /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9D8F2D249BB297006D86BA /* MapViewController.swift */; };
 		CEAC8B892492B70E0066F793 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAC8B882492B70E0066F793 /* AppDelegate.swift */; };
 		CEAC8B8B2492B70E0066F793 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAC8B8A2492B70E0066F793 /* SceneDelegate.swift */; };
-		CEAC8B8D2492B70E0066F793 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAC8B8C2492B70E0066F793 /* MapViewController.swift */; };
 		CEAC8B922492B7130066F793 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEAC8B912492B7130066F793 /* Assets.xcassets */; };
 		CEAC8B952492B7130066F793 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEAC8B932492B7130066F793 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -29,10 +31,12 @@
 		3A0D1190249A5A4F00672983 /* BioPoints.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = BioPoints.geojson; sourceTree = "<group>"; };
 		3A0D1197249B0F4900672983 /* EstateArtwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstateArtwork.swift; sourceTree = "<group>"; };
 		3A0D1199249B7B0800672983 /* EstatePoints.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = EstatePoints.geojson; sourceTree = "<group>"; };
+		CE9D8F2724997CBC006D86BA /* LegendasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegendasViewController.swift; sourceTree = "<group>"; };
+		CE9D8F2B249AC546006D86BA /* LegendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegendView.swift; sourceTree = "<group>"; };
+		CE9D8F2D249BB297006D86BA /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		CEAC8B852492B70E0066F793 /* Challenge-Biomas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Challenge-Biomas.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEAC8B882492B70E0066F793 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEAC8B8A2492B70E0066F793 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CEAC8B8C2492B70E0066F793 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		CEAC8B912492B7130066F793 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEAC8B942492B7130066F793 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEAC8B962492B7130066F793 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -99,7 +103,9 @@
 				3A0D112E2497C11000672983 /* infomation */,
 				CEAC8B882492B70E0066F793 /* AppDelegate.swift */,
 				CEAC8B8A2492B70E0066F793 /* SceneDelegate.swift */,
-				CEAC8B8C2492B70E0066F793 /* MapViewController.swift */,
+				CE9D8F2D249BB297006D86BA /* MapViewController.swift */,
+				CE9D8F2724997CBC006D86BA /* LegendasViewController.swift */,
+				CE9D8F2B249AC546006D86BA /* LegendView.swift */,
 				3A0D1190249A5A4F00672983 /* BioPoints.geojson */,
 				3A0D1199249B7B0800672983 /* EstatePoints.geojson */,
 				CEAC8B912492B7130066F793 /* Assets.xcassets */,
@@ -182,9 +188,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE9D8F2824997CBC006D86BA /* LegendasViewController.swift in Sources */,
+				CEAC8B892492B70E0066F793 /* AppDelegate.swift in Sources */,
+				CE9D8F2C249AC546006D86BA /* LegendView.swift in Sources */,
+				CE9D8F2E249BB297006D86BA /* MapViewController.swift in Sources */,
 				3A0D1198249B0F4900672983 /* EstateArtwork.swift in Sources */,
 				3A0D11342497D8AC00672983 /* Brasil.swift in Sources */,
-				CEAC8B8D2492B70E0066F793 /* MapViewController.swift in Sources */,
 				3A0D11362497D9D600672983 /* BrasilMapOverlay.swift in Sources */,
 				CEAC8B892492B70E0066F793 /* AppDelegate.swift in Sources */,
 				3A0D113D2498F6AE00672983 /* Artwork.swift in Sources */,

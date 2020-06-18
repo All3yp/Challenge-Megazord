@@ -170,7 +170,6 @@ class MapViewController: UIViewController, MKMapViewDelegate {
             self.infoButton.heightAnchor.constraint(equalToConstant: 50),
             self.infoButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -25),
             self.infoButton.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 50),
-
             self.arrowButton.widthAnchor.constraint(equalToConstant: 50),
             self.arrowButton.heightAnchor.constraint(equalToConstant: 50),
             self.arrowButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -25),
@@ -297,9 +296,13 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         print("Clicked")
 
     }
+    
 
     @objc func buttonActionInfo(sender: UIButton!) {
         print("Clicked")
+        let vc = LegendasViewController()
+        vc.modalPresentationStyle = .custom
+        present(vc, animated: true, completion: nil)
 
     }
 
