@@ -17,12 +17,12 @@ struct Legend {
 class GroupLegendsView: UIView {
     
     var legendArray: [Legend] = [
-        Legend(title: "Amazônia", color: .green),
-        Legend(title: "Caatinga", color: .orange),
-        Legend(title: "Pantanal", color: .brown),
-        Legend(title: "Cerrado", color: .magenta),
-        Legend(title: "Pampa", color: .systemPink),
-        Legend(title: "Mata Atlântica", color: .yellow)
+        Legend(title: "Amazônia", color: UIColor(named: "AmazoniaColor")!),
+        Legend(title: "Cerrado", color: UIColor(named: "CerradoColor")!),
+        Legend(title: "Caatinga", color: UIColor(named: "CaatingaColor")!),
+        Legend(title: "Pampa", color: UIColor(named: "PampaColor")!),
+        Legend(title: "Pantanal", color: UIColor(named: "PantanalColor")!), 
+        Legend(title: "Mata Atlântica", color: UIColor(named: "MataAtlanticaColor")!)
     ]
     
     lazy var collectionView: UICollectionView = {
