@@ -355,6 +355,8 @@
 	<array/>
 	<key>Sudeste</key>
 	<array/>
+	<key>AmazoniaColor</key>
+	<string>&quot;tintButton&quot;</string>
 	<key>Sul</key>
 	<array/>
 </dict>

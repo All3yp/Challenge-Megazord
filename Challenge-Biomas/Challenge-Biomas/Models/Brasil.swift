@@ -12,7 +12,6 @@ class Brasil {
     
     private var artworks: [Artwork] = []
 
-    var name: String?
     var Caatinga: [CLLocationCoordinate2D] = []
     var Pampa: [CLLocationCoordinate2D] = []
     var MataAtlantica:[CLLocationCoordinate2D] = []
@@ -34,6 +33,8 @@ class Brasil {
         latitude: overlayBottomLeftCoordinate.latitude,
         longitude: overlayTopRightCoordinate.longitude)
     }
+    
+//    var AmazoniaColor: String
 
     var overlayBoundingMapRect: MKMapRect {
         let topLeft = MKMapPoint(overlayTopLeftCoordinate)
@@ -166,6 +167,7 @@ class Brasil {
             latitude: CLLocationDegrees($0.x),
             longitude: CLLocationDegrees($0.y))
                }
+
 }
 
 //Carrega o arquivo .plist

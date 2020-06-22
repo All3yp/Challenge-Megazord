@@ -52,8 +52,12 @@ final class LegendasViewController: UIViewController {
     let menuHeight = UIScreen.main.bounds.height / 2.5
     var isPresenting = false
     
-    init() {
+    //delegate foi indicado como var weak logo o protocolo deve se class
+    weak var delegate: LegendasViewDelegate?
+    
+    init(delegate: LegendasViewDelegate) {
         super.init(nibName: nil, bundle: nil)
+        self.delegate = delegate
         modalPresentationStyle = .custom
         transitioningDelegate = self
     }
@@ -84,7 +88,7 @@ final class LegendasViewController: UIViewController {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(LegendasViewController.handleTap(_:)))
         backdropView.addGestureRecognizer(tapGesture)
         
-         self.menuView.addSubview(segmentedControll)
+        self.menuView.addSubview(segmentedControll)
         self.menuView.addSubview(viewzinha)
     }
     
@@ -92,22 +96,19 @@ final class LegendasViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    //
     @objc func changeColor(sender: UISegmentedControl) {
-//        print("Change color")
-//
-//        switch sender.selectedSegmentIndex {
-//        case 1:
-//            self.view.backgroundColor = UIColor.green
-//            print("Green")
-//        case 2: self.view.backgroundColor = UIColor.blue
-//            print("Blue")
-//        default:
-//            self.view.backgroundColor = UIColor.purple
-//            print("Purple")
-//        }
+        
+        switch sender.selectedSegmentIndex {
+        case 1:
+            self.delegate?.exibir(.estados)
+        default:
+            self.delegate?.exibir(.bioma)
+        }
     }
-
 }
+
+
 
 extension LegendasViewController: UIViewControllerTransitioningDelegate, UIViewControllerAnimatedTransitioning {
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
