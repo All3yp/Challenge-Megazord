@@ -57,7 +57,7 @@ class EstateArtwork: NSObject, MKAnnotation {
       guard let area = area else {
         return nil
       }
-      
+
       let addressDict = [CNPostalAddressStreetKey: area]
       let placemark = MKPlacemark(
         coordinate: coordinate,
