@@ -47,6 +47,17 @@ final class LegendasViewController: UIViewController {
         return bdView
     }()
     
+    lazy var biomas: GroupLegendsView = {
+        let view = GroupLegendsView()
+        return view
+    }()
+    
+    lazy var desmatamento: GroupLegendsView = {
+        let view = GroupLegendsView()
+        return view
+    }()
+    
+    
     
     let menuView = UIView()
     let menuHeight = UIScreen.main.bounds.height / 2.5
@@ -90,6 +101,17 @@ final class LegendasViewController: UIViewController {
         
         self.menuView.addSubview(segmentedControll)
         self.menuView.addSubview(viewzinha)
+        
+        self.menuView.addSubview(biomas)
+        self.menuView.addSubview(desmatamento)
+        print(menuView)
+        
+        setupSegmented()
+        
+        setupGroupedItem(&biomas)
+        setupGroupedItem(&desmatamento)
+        
+        segmentedControll.sendActions(for: .valueChanged)
     }
     
     @objc func handleTap(_ sender: UITapGestureRecognizer) {
@@ -98,6 +120,20 @@ final class LegendasViewController: UIViewController {
     
     //
     @objc func changeColor(sender: UISegmentedControl) {
+
+        print("selected \(sender.selectedSegmentIndex)")
+
+        switch sender.selectedSegmentIndex {
+        case 0:
+            biomas.isHidden = false
+            desmatamento.isHidden = true
+            
+        case 1:
+            biomas.isHidden = true
+            desmatamento.isHidden = false
+        default:
+            break
+        }
         
         switch sender.selectedSegmentIndex {
         case 1:
@@ -105,7 +141,32 @@ final class LegendasViewController: UIViewController {
         default:
             self.delegate?.exibir(.bioma)
         }
+
     }
+    
+    func setupSegmented() {
+        segmentedControll.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            segmentedControll.leadingAnchor.constraint(equalTo: self.menuView.leadingAnchor, constant: 20),
+            segmentedControll.trailingAnchor.constraint(equalTo: self.menuView.trailingAnchor, constant: -20),
+            segmentedControll.topAnchor.constraint(equalTo: self.viewzinha.bottomAnchor, constant: 20),
+            segmentedControll.centerXAnchor.constraint(equalTo: self.menuView.centerXAnchor)
+        ])
+    }
+    
+    func setupGroupedItem(_ view: inout GroupLegendsView) {
+        view.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            view.leadingAnchor.constraint(equalTo: self.segmentedControll.leadingAnchor),
+            view.topAnchor.constraint(equalTo: self.segmentedControll.bottomAnchor, constant: 50),
+            view.trailingAnchor.constraint(equalTo: self.segmentedControll.trailingAnchor),
+            view.bottomAnchor.constraint(equalTo: self.menuView.bottomAnchor, constant: -20)
+        ])
+    }
+    
+    
+    
+
 }
 
 
