@@ -5,8 +5,8 @@
       "type": "Feature",
       "properties": {
         "area2": "2122km²",
-        "title2": "Pampa",
-        "number2": 1,
+        "title2": "Rio Grande do Sul",
+        "number2": 1
       },
       "geometry": {
         "type": "Point",
@@ -19,8 +19,8 @@
       "type": "Feature",
       "properties": {
         "area2": "1221km²",
-        "title2": "Amazônia",
-        "number2": 2,
+        "title2": "Amazonas",
+        "number2": 2
       },
       "geometry": {
         "type": "Point",
@@ -28,67 +28,7 @@
            -59.41406250000001,-5.44102230371796
         ]
       }
-    },
-    {
-         "type": "Feature",
-         "properties": {
-           "area2": "1213km²",
-           "title2": "Pantanal",
-           "number2": 3
-           
-         },
-         "geometry": {
-           "type": "Point",
-           "coordinates2": [
-            -56.42578125000001,-17.811456088564473
-           ]
-         }
-       },
-       {
-         "type": "Feature",
-         "properties": {
-           "area2": "1213km²",
-           "title2": "Cerrado",
-           "number2": 4
-           
-         },
-         "geometry": {
-           "type": "Point",
-           "coordinates": [
-            -47.98828125000001,-14.434680215297268
-           ]
-         }
-       },
-       {
-         "type": "Feature",
-         "properties": {
-           "area2": "1213km²",
-           "title2": "Caatinga",
-           "number2": 5
-           
-         },
-         "geometry": {
-           "type": "Point",
-           "coordinates": [
-            -40.07812500000001,-8.059229627200192
-           ]
-         }
-       },
-       {
-         "type": "Feature",
-         "properties": {
-           "area2": "1213km²",
-           "title2": "Mata Atlântica",
-           "number2": 6
-           
-         },
-         "geometry": {
-           "type": "Point",
-           "coordinates": [
-            -42.36328125000001,-22.268764039073968
-           ]
-         }
-       },
+    }
   ]
 }
 

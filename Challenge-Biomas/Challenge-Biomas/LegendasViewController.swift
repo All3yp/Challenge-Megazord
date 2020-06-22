@@ -63,8 +63,12 @@ final class LegendasViewController: UIViewController {
     let menuHeight = UIScreen.main.bounds.height / 2.5
     var isPresenting = false
     
-    init() {
+    //delegate foi indicado como var weak logo o protocolo deve se class
+    weak var delegate: LegendasViewDelegate?
+    
+    init(delegate: LegendasViewDelegate) {
         super.init(nibName: nil, bundle: nil)
+        self.delegate = delegate
         modalPresentationStyle = .custom
         transitioningDelegate = self
     }
@@ -95,7 +99,7 @@ final class LegendasViewController: UIViewController {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(LegendasViewController.handleTap(_:)))
         backdropView.addGestureRecognizer(tapGesture)
         
-         self.menuView.addSubview(segmentedControll)
+        self.menuView.addSubview(segmentedControll)
         self.menuView.addSubview(viewzinha)
         
         self.menuView.addSubview(biomas)
@@ -114,7 +118,9 @@ final class LegendasViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    //
     @objc func changeColor(sender: UISegmentedControl) {
+
         print("selected \(sender.selectedSegmentIndex)")
 
         switch sender.selectedSegmentIndex {
@@ -128,6 +134,14 @@ final class LegendasViewController: UIViewController {
         default:
             break
         }
+        
+        switch sender.selectedSegmentIndex {
+        case 1:
+            self.delegate?.exibir(.estados)
+        default:
+            self.delegate?.exibir(.bioma)
+        }
+
     }
     
     func setupSegmented() {
@@ -149,7 +163,6 @@ final class LegendasViewController: UIViewController {
             view.bottomAnchor.constraint(equalTo: self.menuView.bottomAnchor, constant: -20)
         ])
     }
-    
     
     
     
