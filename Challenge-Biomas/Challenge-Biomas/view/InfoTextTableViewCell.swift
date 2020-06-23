@@ -10,6 +10,8 @@ import UIKit
 
 class InfoTextTableViewCell: UITableViewCell {
     
+    static let identifier = "InfoTextTableViewCell"
+    
     var title = UILabel()
     var descriptionText = UILabel()
 
