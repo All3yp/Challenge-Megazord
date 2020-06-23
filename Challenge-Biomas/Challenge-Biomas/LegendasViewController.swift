@@ -25,7 +25,8 @@ final class LegendasViewController: UIViewController {
         
         let items = ["Biomas" , "Desmatamento"]
         let customSC = UISegmentedControl(items: items)
-        customSC.selectedSegmentIndex = 0
+        // ler o user defaul e passando pro index selecionado
+        customSC.selectedSegmentIndex = UserDefaults.standard.value(forKey: "MapSelectedIndex") as? Int ?? 0
         
         let frame = UIScreen.main.bounds
         customSC.frame = CGRect(x: frame.minX + 10, y: frame.minY + 50,
@@ -122,6 +123,9 @@ final class LegendasViewController: UIViewController {
     @objc func changeColor(sender: UISegmentedControl) {
 
         print("selected \(sender.selectedSegmentIndex)")
+        
+        // user default para salvar o index selecionado
+        UserDefaults.standard.set(sender.selectedSegmentIndex, forKey: "MapSelectedIndex")
 
         switch sender.selectedSegmentIndex {
         case 0:
