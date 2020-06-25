@@ -119,7 +119,7 @@ final class LegendasViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    //
+    //Mudança entre biomas e desmatamento
     @objc func changeColor(sender: UISegmentedControl) {
 
         print("selected \(sender.selectedSegmentIndex)")
@@ -140,10 +140,12 @@ final class LegendasViewController: UIViewController {
         }
         
         switch sender.selectedSegmentIndex {
+        case 0:
+            self.delegate?.exibir(.bioma)
         case 1:
             self.delegate?.exibir(.estados)
         default:
-            self.delegate?.exibir(.bioma)
+            break
         }
 
     }

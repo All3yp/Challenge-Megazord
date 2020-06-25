@@ -14,6 +14,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     let brasil = Brasil(filename: "BrasilCoord")
     let mapView = MKMapView()
     var tipo: Tipo = .bioma
+    var biomas: Bioma = .amazonia
     
 //    Função que carrega o geojson ao iniciar o aplicativo
     private func loadInitialData() {
@@ -170,6 +171,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         ) -> MKAnnotationView? {
                     
         let customAnnotation: MKAnnotation
+        
         if tipo == .bioma {
             customAnnotation = annotation as! Artwork
         } else {
@@ -196,7 +198,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
 //      calloutAccessoryControlTapped control: UIControl
 //    ) {
 //
-//      guard let artwork = view.annotation as? EstateArtwork else {
+//      guard let artwork = view.annotation as? Artwork else {
 //        return
 //      }
 //
@@ -208,18 +210,59 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     
 
      //Gera o polígono
-    func mapView(_ map: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
-        if overlay is MKPolygon {
-            let polygonView = MKPolygonRenderer(overlay: overlay)
-            polygonView.fillColor = UIColor(red: 0.0196, green: 0.447, blue: 0.0039, alpha: 1)
-            polygonView.strokeColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
-            
-            return polygonView
-        }
-
-         return MKOverlayRenderer()
-    }
+//    func mapView(_ map: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+//        if overlay is MKPolygon {
+//            let polygonView = MKPolygonRenderer(overlay: overlay)
+//            polygonView.fillColor = UIColor(red: 0.0196, green: 0.447, blue: 0.0039, alpha: 1)
+//            polygonView.strokeColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+//
+//            return polygonView
+//        }
+//
+//         return MKOverlayRenderer()
+//    }
     
+//    é pra testar alteração aqui
+   func mapView(_ map: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+           if overlay is MKPolygon {
+               let polygonView = MKPolygonRenderer(overlay: overlay)
+
+                if tipo == .bioma {
+                    
+                    switch biomas  {
+                        case .amazonia:
+                            polygonView.fillColor = UIColor(red: 0.0196, green: 0.447, blue: 0.0039, alpha: 1)
+                            polygonView.strokeColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
+                        case .pampa:
+                            polygonView.fillColor = UIColor(red: 0.011, green: 0.105, blue: 0.996, alpha: 0.5)
+                            polygonView.strokeColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
+                        case .pantanal:
+                            polygonView.fillColor = UIColor(red: 0.976, green: 0.756, blue: 0.341, alpha: 1)
+                            polygonView.strokeColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
+                        case .caatinga:
+                            polygonView.fillColor = UIColor(red: 0.7, green: 0.3, blue: 0.3, alpha: 1)
+                            polygonView.strokeColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
+                        case .cerrado:
+                            polygonView.fillColor = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5)
+                            polygonView.strokeColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
+                        case .mataAtlantica:
+                            polygonView.fillColor = UIColor(red: 0.478, green: 0.384, blue: 0.286, alpha: 1)
+                            polygonView.strokeColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
+                        }
+                    
+                    return polygonView
+                } else {
+                    polygonView.fillColor = UIColor(red: 0.75, green: 0.75, blue: 0.75, alpha: 1)
+                    polygonView.strokeColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+
+                    return polygonView
+                }
+
+           }
+
+        return MKOverlayRenderer()
+    }
+//
 //    Adiciona o overlay para a addBoundary
     func addOverlay() {
         let overlay = BrasilMapOverlay(brasil: brasil)
@@ -229,25 +272,41 @@ class MapViewController: UIViewController, MKMapViewDelegate {
 
     //Adiciona as coordenadas onde o será feita a marcação de biomas
     func addBiomaBoundary() {
-        mapView.addOverlay(MKPolygon(coordinates: brasil.Caatinga, count: brasil.Caatinga.count))
-        mapView.addOverlay(MKPolygon(coordinates: brasil.Pampa, count: brasil.Pampa.count))
-        mapView.addOverlay(MKPolygon(coordinates: brasil.MataAtlantica, count: brasil.MataAtlantica.count))
-        mapView.addOverlay(MKPolygon(coordinates: brasil.Pantanal, count: brasil.Pantanal.count))
-        mapView.addOverlay(MKPolygon(coordinates: brasil.Cerrado, count: brasil.Cerrado.count))
-        mapView.addOverlay(MKPolygon(coordinates: brasil.Amazonia, count: brasil.Amazonia.count))
+        while biomas == .amazonia {
+            mapView.addOverlay(MKPolygon(coordinates: brasil.Amazonia, count: brasil.Amazonia.count))
+            biomas = .pampa
+        }
+        while biomas == .pampa {
+            mapView.addOverlay(MKPolygon(coordinates: brasil.Pampa, count: brasil.Pampa.count))
+            biomas = .pantanal
+        }
+        while biomas == .pantanal {
+            mapView.addOverlay(MKPolygon(coordinates: brasil.Pantanal, count: brasil.Pantanal.count))
+            biomas = .caatinga
+        }
+        while biomas == .caatinga {
+            mapView.addOverlay(MKPolygon(coordinates: brasil.Caatinga, count: brasil.Caatinga.count))
+            biomas = .cerrado
+        }
+        while biomas == .cerrado {
+            mapView.addOverlay(MKPolygon(coordinates: brasil.Cerrado, count: brasil.Cerrado.count))
+            biomas = .mataAtlantica
+        }
+        while biomas == .mataAtlantica {
+            mapView.addOverlay(MKPolygon(coordinates: brasil.MataAtlantica, count: brasil.MataAtlantica.count))
+            biomas = .amazonia
+        }
     }
     
     
     //Adiciona as coordenadas onde será feita a marcações de estado
     func addEstadoBoundary() {
-        mapView.addOverlay(MKPolygon(coordinates: brasil.Nordeste, count: brasil.Nordeste.count))
+//        mapView.addOverlay(MKPolygon(coordinates: brasil.Amazonas, count: brasil.Amazonas.count))
     }
     
     
     //Button que muda o filtro por enquanto
     @objc func buttonActionArrow(sender: UIButton!) {
-//        displayOverlay.toggle()
-        print("Clicked")
 
     }
     
@@ -257,9 +316,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         let vc = LegendasViewController(delegate: self)
         vc.modalPresentationStyle = .custom
         present(vc, animated: true, completion: nil)
-
     }
-
 }
 
 extension MapViewController: LegendasViewDelegate {
@@ -270,7 +327,6 @@ extension MapViewController: LegendasViewDelegate {
         switch tipo {
         case .bioma:
             
-//            mapView.removeAnnotations(artworks)
             mapView.removeOverlays(mapView.overlays)
             mapView.removeAnnotations(estateartworks)
             addBiomaBoundary()
@@ -279,10 +335,8 @@ extension MapViewController: LegendasViewDelegate {
             
         case .estados:
             
-
             mapView.removeOverlays(mapView.overlays)
             addEstadoBoundary()
-           
             mapView.removeAnnotations(artworks)
             mapView.addAnnotations(estateartworks)
         }
@@ -298,5 +352,14 @@ protocol LegendasViewDelegate: class {
 enum Tipo {
     case bioma
     case estados
+}
+
+enum Bioma {
+    case amazonia
+    case pampa
+    case pantanal
+    case caatinga
+    case cerrado
+    case mataAtlantica
 }
 

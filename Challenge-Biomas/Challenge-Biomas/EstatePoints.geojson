@@ -5,13 +5,13 @@
       "type": "Feature",
       "properties": {
         "area2": "2122km²",
-        "title2": "Rio Grande do Sul",
+        "title2": "Amazonas",
         "number2": 1
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -54.233901,-30.496549
+           -64.454698,-4.509145
         ]
       }
     },
@@ -19,16 +19,256 @@
       "type": "Feature",
       "properties": {
         "area2": "1221km²",
-        "title2": "Amazonas",
+        "title2": "Acre",
         "number2": 2
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-           -59.41406250000001,-5.44102230371796
+           -70.079698,-9.783300
         ]
       }
-    }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "area2": "1221km²",
+        "title2": "Rondônia",
+        "number2": 3
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+           -63.092394,-11.424644
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "area2": "1221km²",
+        "title2": "Pará",
+        "number2": 4
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+           -55.665636,-5.778400
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "area2": "1221km²",
+        "title2": "Tocantins",
+        "number2": 5
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+           -48.546495,-11.295391
+        ]
+      }
+    },
+    {
+         "type": "Feature",
+         "properties": {
+           "area2": "1221km²",
+           "title2": "Amapá",
+           "number2": 6
+         },
+         "geometry": {
+           "type": "Point",
+           "coordinates": [
+               -51.754503,0.847490
+           ]
+         }
+       },
+       {
+         "type": "Feature",
+         "properties": {
+           "area2": "1221km²",
+           "title2": "Roraima",
+           "number2": 7
+         },
+         "geometry": {
+           "type": "Point",
+           "coordinates": [
+                -61.202745,1.198996
+           ]
+         }
+       },
+       {
+         "type": "Feature",
+         "properties": {
+           "area2": "1221km²",
+           "title2": "Maranhão",
+           "number2": 11
+         },
+         "geometry": {
+           "type": "Point",
+           "coordinates": [
+                -44.591417,-2.842718
+           ]
+         }
+       },
+       {
+         "type": "Feature",
+         "properties": {
+           "area2": "1221km²",
+           "title2": "Bahia",
+           "number2": 12
+         },
+         "geometry": {
+           "type": "Point",
+           "coordinates": [
+                -41.0757928,-14.081774
+           ]
+         }
+       },
+       {
+         "type": "Feature",
+         "properties": {
+           "area2": "1221km²",
+           "title2": "Piaui",
+           "number2": 13
+         },
+         "geometry": {
+           "type": "Point",
+           "coordinates": [
+                -42.350206,-8.046793
+           ]
+         }
+       },
+       {
+         "type": "Feature",
+         "properties": {
+           "area2": "1221km²",
+           "title2": "Mato Grosso",
+           "number2": 20
+         },
+         "geometry": {
+           "type": "Point",
+           "coordinates": [
+                -56.105089,-13.655133
+           ]
+         }
+       },
+       {
+         "type": "Feature",
+         "properties": {
+           "area2": "1221km²",
+           "title2": "Mato Grosso do Sul",
+           "number2": 21
+         },
+         "geometry": {
+           "type": "Point",
+           "coordinates": [
+               -55.056510,-20.502128
+           ]
+         }
+       },
+       {
+       "type": "Feature",
+       "properties": {
+         "area2": "1221km²",
+         "title2": "Goiás",
+         "number2": 22
+       },
+       "geometry": {
+         "type": "Point",
+         "coordinates": [
+             -50.890782,-16.158380
+         ]
+       }
+       },
+       {
+       "type": "Feature",
+       "properties": {
+         "area2": "1221km²",
+         "title2": "Distrito Federal",
+         "number2": 23
+       },
+       "geometry": {
+         "type": "Point",
+         "coordinates": [
+             -47.827507,-15.776900
+         ]
+       }
+       },
+       {
+       "type": "Feature",
+       "properties": {
+         "area2": "1221km²",
+         "title2": "Minas Gerais",
+         "number2": 31
+       },
+       "geometry": {
+         "type": "Point",
+         "coordinates": [
+             -44.333855,-18.784613
+         ]
+       }
+       },
+       {
+       "type": "Feature",
+       "properties": {
+         "area2": "1221km²",
+         "title2": "São Paulo",
+         "number2": 32
+       },
+       "geometry": {
+         "type": "Point",
+         "coordinates": [
+             -47.849480,-22.971520
+         ]
+       }
+       },
+       {
+       "type": "Feature",
+       "properties": {
+         "area2": "1221km²",
+         "title2": "Paraná",
+         "number2": 41
+       },
+       "geometry": {
+         "type": "Point",
+         "coordinates": [
+             -52.669206,-24.117145
+         ]
+       }
+       },
+       {
+       "type": "Feature",
+       "properties": {
+         "area2": "1221km²",
+         "title2": "Santa Catarina",
+         "number2": 42
+       },
+       "geometry": {
+         "type": "Point",
+         "coordinates": [
+             -50.093739,-27.080066
+         ]
+       }
+       },
+       {
+       "type": "Feature",
+       "properties": {
+         "area2": "1221km²",
+         "title2": "Rio Grande do Sul",
+         "number2": 43
+       },
+       "geometry": {
+         "type": "Point",
+         "coordinates": [
+             -53.512894,-29.774153
+         ]
+       }
+       },
+
+
   ]
 }
 
