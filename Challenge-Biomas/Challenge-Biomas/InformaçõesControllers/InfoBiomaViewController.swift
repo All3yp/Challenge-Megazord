@@ -11,26 +11,32 @@ import UIKit
 class InfoBiomaViewController: UIViewController {
     
     let tableView = UITableView()
-    let biomaData = LoadJson().biomaData
     let backButton = UIButton()
+    let biomaData = LoadJson().biomaData
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTable()
         configureTableHeader()
         configureBackButton()
+        
     }
     override var prefersStatusBarHidden: Bool {
         return true
     }
     
+    @objc
+    func buttonAction() {
+        dismiss(animated: true, completion: nil)
+        print("Button pressed")
+    }
+    
     func configureBackButton(){
         view.addSubview(backButton)
-        let backButtonConfig = UIImage.SymbolConfiguration(textStyle: .largeTitle)
-        backButton.setImage(UIImage(systemName: "xmark.circle.fill", withConfiguration: backButtonConfig), for: .normal)
-//        backButton.tintColor = UIColor(red: 223/255, green: 240/255, blue: 87/255, alpha: 1)
-        backButton.tintColor = UIColor(red: 82/255, green: 82/255, blue: 82/255, alpha: 1)
+        backButton.setImage(UIImage(named: "Icone"), for: .normal)
         
+        //Ação do Botão
+        backButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         
         //Constraints
         backButton.translatesAutoresizingMaskIntoConstraints = false
@@ -42,7 +48,7 @@ class InfoBiomaViewController: UIViewController {
     
     func configureTableHeader(){
         let tableHeader = TableViewHeader(frame: CGRect(x:0, y: 0, width: view.frame.size.width, height: 232))
-        tableHeader.set(bioma: biomaData[0])
+        tableHeader.set(bioma: biomaData[MapViewController.b])
         tableView.tableHeaderView = tableHeader
     }
     
@@ -84,11 +90,11 @@ extension InfoBiomaViewController: UITableViewDelegate,UITableViewDataSource{
         switch indexPath.section {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: InfoGeraisCell.identifier, for: indexPath) as! InfoGeraisCell
-            cell.configCell(bioma: biomaData[0])
+            cell.configCell(bioma: biomaData[MapViewController.b])
             return cell
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: InfoEspecificaCell.identifier, for: indexPath) as! InfoEspecificaCell
-            cell.configCell(bioma: biomaData[0], row: indexPath.row)
+            cell.configCell(bioma: biomaData[MapViewController.b], row: indexPath.row)
             return cell
         default:
             return UITableViewCell()

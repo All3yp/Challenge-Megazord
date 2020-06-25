@@ -9,9 +9,7 @@
 import Foundation
 
 public class LoadJson{
-    @Published var biomaData = [Bioma]()
-    
-    let directory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
+    var biomaData = [Bioma]()
     
     init(){
         load()
