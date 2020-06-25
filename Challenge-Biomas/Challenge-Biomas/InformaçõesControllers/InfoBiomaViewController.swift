@@ -12,7 +12,7 @@ class InfoBiomaViewController: UIViewController {
     
     let tableView = UITableView()
     let backButton = UIButton()
-    let biomaData = LoadJson().biomaData
+    let biomaData = LoaderJson().biomaData
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +47,7 @@ class InfoBiomaViewController: UIViewController {
     }
     
     func configureTableHeader(){
-        let tableHeader = TableViewHeader(frame: CGRect(x:0, y: 0, width: view.frame.size.width, height: 232))
+        let tableHeader = HeaderView(frame: CGRect(x:0, y: 0, width: view.frame.size.width, height: 232))
         tableHeader.set(bioma: biomaData[MapViewController.b])
         tableView.tableHeaderView = tableHeader
     }

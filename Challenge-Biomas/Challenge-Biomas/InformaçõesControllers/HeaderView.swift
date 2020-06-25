@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TableViewHeader: UIView {
+class HeaderView: UIView {
     
     var imageView = UIImageView()
     var titleLabel = UILabel()
@@ -73,3 +73,4 @@ class TableViewHeader: UIView {
     }
     
 }
+

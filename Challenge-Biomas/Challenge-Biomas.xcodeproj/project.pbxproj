@@ -16,13 +16,13 @@
 		3A0D119B249B920700672983 /* EstatePoints.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 3A0D1199249B7B0800672983 /* EstatePoints.geojson */; };
 		884964A62497EF52000B86DF /* Bioma.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884964A52497EF52000B86DF /* Bioma.swift */; };
 		884964A92497F12C000B86DF /* BiomasData.json in Resources */ = {isa = PBXBuildFile; fileRef = 884964A82497F12C000B86DF /* BiomasData.json */; };
-		884964AB2497F4C9000B86DF /* LoadJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884964AA2497F4C9000B86DF /* LoadJson.swift */; };
 		884964AD24980071000B86DF /* InfoBiomaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884964AC24980071000B86DF /* InfoBiomaViewController.swift */; };
 		884964AF249814DE000B86DF /* UiViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884964AE249814DE000B86DF /* UiViewExt.swift */; };
 		884964B12498F545000B86DF /* InfoGeraisCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884964B02498F545000B86DF /* InfoGeraisCell.swift */; };
 		884964B924991395000B86DF /* InfoEspecificaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884964B824991395000B86DF /* InfoEspecificaCell.swift */; };
 		884964BD249A984E000B86DF /* InfoGeraisXib.xib in Resources */ = {isa = PBXBuildFile; fileRef = 884964BC249A984E000B86DF /* InfoGeraisXib.xib */; };
-		884964BF249AB218000B86DF /* TableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884964BE249AB218000B86DF /* TableViewHeader.swift */; };
+		88BAD32F24A52786003BE19F /* LoaderJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BAD32E24A52786003BE19F /* LoaderJson.swift */; };
+		88BAD33124A527EA003BE19F /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BAD33024A527EA003BE19F /* HeaderView.swift */; };
 		88ECF70124A3DBD200148CCB /* Challenge_BiomasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ECF70024A3DBD200148CCB /* Challenge_BiomasTests.swift */; };
 		88ECF70924A3DBF100148CCB /* InfoBiomaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ECF70824A3DBF100148CCB /* InfoBiomaView.swift */; };
 		CE9D8F2824997CBC006D86BA /* LegendasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9D8F2724997CBC006D86BA /* LegendasViewController.swift */; };
@@ -55,13 +55,13 @@
 		3A0D1199249B7B0800672983 /* EstatePoints.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = EstatePoints.geojson; sourceTree = "<group>"; };
 		884964A52497EF52000B86DF /* Bioma.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bioma.swift; sourceTree = "<group>"; };
 		884964A82497F12C000B86DF /* BiomasData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BiomasData.json; sourceTree = "<group>"; };
-		884964AA2497F4C9000B86DF /* LoadJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadJson.swift; sourceTree = "<group>"; };
 		884964AC24980071000B86DF /* InfoBiomaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoBiomaViewController.swift; sourceTree = "<group>"; };
 		884964AE249814DE000B86DF /* UiViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiViewExt.swift; sourceTree = "<group>"; };
 		884964B02498F545000B86DF /* InfoGeraisCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoGeraisCell.swift; sourceTree = "<group>"; };
 		884964B824991395000B86DF /* InfoEspecificaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoEspecificaCell.swift; sourceTree = "<group>"; };
 		884964BC249A984E000B86DF /* InfoGeraisXib.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoGeraisXib.xib; sourceTree = "<group>"; };
-		884964BE249AB218000B86DF /* TableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewHeader.swift; sourceTree = "<group>"; };
+		88BAD32E24A52786003BE19F /* LoaderJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderJson.swift; sourceTree = "<group>"; };
+		88BAD33024A527EA003BE19F /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		88ECF6FE24A3DBD200148CCB /* Challenge-BiomasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Challenge-BiomasTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		88ECF70024A3DBD200148CCB /* Challenge_BiomasTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge_BiomasTests.swift; sourceTree = "<group>"; };
 		88ECF70224A3DBD200148CCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -126,8 +126,8 @@
 		884964EE24A27F89000B86DF /* InformaçõesControllers */ = {
 			isa = PBXGroup;
 			children = (
+				88BAD33024A527EA003BE19F /* HeaderView.swift */,
 				884964AC24980071000B86DF /* InfoBiomaViewController.swift */,
-				884964BE249AB218000B86DF /* TableViewHeader.swift */,
 				884964B02498F545000B86DF /* InfoGeraisCell.swift */,
 				884964B824991395000B86DF /* InfoEspecificaCell.swift */,
 			);
@@ -199,8 +199,8 @@
 				CEAC8B932492B7130066F793 /* LaunchScreen.storyboard */,
 				CEAC8B962492B7130066F793 /* Info.plist */,
 				884964BC249A984E000B86DF /* InfoGeraisXib.xib */,
-				884964AA2497F4C9000B86DF /* LoadJson.swift */,
 				884964AE249814DE000B86DF /* UiViewExt.swift */,
+				88BAD32E24A52786003BE19F /* LoaderJson.swift */,
 			);
 			path = "Challenge-Biomas";
 			sourceTree = "<group>";
@@ -322,11 +322,11 @@
 				884964AF249814DE000B86DF /* UiViewExt.swift in Sources */,
 				CEAC8B892492B70E0066F793 /* AppDelegate.swift in Sources */,
 				884964B924991395000B86DF /* InfoEspecificaCell.swift in Sources */,
-				884964BF249AB218000B86DF /* TableViewHeader.swift in Sources */,
-				884964AB2497F4C9000B86DF /* LoadJson.swift in Sources */,
 				884964AD24980071000B86DF /* InfoBiomaViewController.swift in Sources */,
 				884964A62497EF52000B86DF /* Bioma.swift in Sources */,
 				884964B12498F545000B86DF /* InfoGeraisCell.swift in Sources */,
+				88BAD33124A527EA003BE19F /* HeaderView.swift in Sources */,
+				88BAD32F24A52786003BE19F /* LoaderJson.swift in Sources */,
 				CE9D8F2824997CBC006D86BA /* LegendasViewController.swift in Sources */,
 				CEAC8B892492B70E0066F793 /* AppDelegate.swift in Sources */,
 				CE9D8F50249C44E9006D86BA /* GroupLegendsView.swift in Sources */,
