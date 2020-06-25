@@ -1,0 +1,99 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "area": "2122km²",
+        "title": "Pampa",
+        "number": 1,
+        "color": "tinbutton"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -54.233901,-30.496549
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "area": "1221km²",
+        "title": "Amazônia",
+        "number": 2,
+        "color": ""
+        
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+           -59.41406250000001,-5.44102230371796
+        ]
+      }
+    },
+    {
+         "type": "Feature",
+         "properties": {
+           "area": "1213km²",
+           "title": "Pantanal",
+           "number": 3
+           
+         },
+         "geometry": {
+           "type": "Point",
+           "coordinates": [
+            -56.42578125000001,-17.811456088564473
+           ]
+         }
+       },
+       {
+         "type": "Feature",
+         "properties": {
+           "area": "1213km²",
+           "title": "Cerrado",
+           "number": 4
+           
+         },
+         "geometry": {
+           "type": "Point",
+           "coordinates": [
+            -47.98828125000001,-14.434680215297268
+           ]
+         }
+       },
+       {
+         "type": "Feature",
+         "properties": {
+           "area": "1213km²",
+           "title": "Caatinga",
+           "number": 5
+           
+         },
+         "geometry": {
+           "type": "Point",
+           "coordinates": [
+            -40.07812500000001,-8.059229627200192
+           ]
+         }
+       },
+       {
+         "type": "Feature",
+         "properties": {
+           "area": "1213km²",
+           "title": "Mata Atlântica",
+           "number": 6
+           
+         },
+         "geometry": {
+           "type": "Point",
+           "coordinates": [
+            -42.36328125000001,-22.268764039073968
+           ]
+         }
+       },
+  ]
+}
+
+
+
