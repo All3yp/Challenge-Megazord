@@ -187,11 +187,11 @@
 		CEAC8B872492B70E0066F793 /* Challenge-Biomas */ = {
 			isa = PBXGroup;
 			children = (
+				CEAC8B882492B70E0066F793 /* AppDelegate.swift */,
+				CEAC8B8A2492B70E0066F793 /* SceneDelegate.swift */,
 				3A0D11322497D64000672983 /* Overlays */,
 				3A0D11312497D61800672983 /* Models */,
 				3A0D112E2497C11000672983 /* infomation */,
-				CEAC8B882492B70E0066F793 /* AppDelegate.swift */,
-				CEAC8B8A2492B70E0066F793 /* SceneDelegate.swift */,
 				884964EE24A27F89000B86DF /* InformaçõesControllers */,
 				884964F024A27FFD000B86DF /* MapaControllers */,
 				884964EF24A27FCF000B86DF /* DadosJson */,

@@ -18,11 +18,7 @@ class Brasil {
     var Pantanal:[CLLocationCoordinate2D] = []
     var Cerrado:[CLLocationCoordinate2D] = []
     var Amazonia:[CLLocationCoordinate2D] = []
-    var Norte:[CLLocationCoordinate2D] = []
-    var Nordeste:[CLLocationCoordinate2D] = []
-    var CentroOeste:[CLLocationCoordinate2D] = []
-    var Sudeste:[CLLocationCoordinate2D] = []
-    var Sul:[CLLocationCoordinate2D] = []
+
     
     var midCoordinate = CLLocationCoordinate2D()
     var overlayTopLeftCoordinate = CLLocationCoordinate2D()
@@ -64,41 +60,22 @@ class Brasil {
             let properties3 = Brasil.plist(filename) as? [String: Any],
             let BiomaPoints3 = properties3["MataAtlantica"] as? [String]
             else { return }
+    
         guard
             let properties4 = Brasil.plist(filename) as? [String: Any],
             let BiomaPoints4 = properties4["Pantanal"] as? [String]
             else { return }
+    
         guard
             let properties5 = Brasil.plist(filename) as? [String: Any],
             let BiomaPoints5 = properties5["Cerrado"] as? [String]
             else { return }
+    
         guard
             let properties6 = Brasil.plist(filename) as? [String: Any],
             let BiomaPoints6 = properties6["Amazonia"] as? [String]
             else { return }
 
-    guard
-           let properties7 = Brasil.plist(filename) as? [String: Any],
-           let BiomaPoints7 = properties7["Norte"] as? [String]
-           else { return }
-    
-        guard
-            let properties8 = Brasil.plist(filename) as? [String: Any],
-            let BiomaPoints8 = properties8["Nordeste"] as? [String]
-            else { return }
-
-        guard
-            let properties9 = Brasil.plist(filename) as? [String: Any],
-            let BiomaPoints9 = properties9["CentroOeste"] as? [String]
-            else { return }
-        guard
-            let properties10 = Brasil.plist(filename) as? [String: Any],
-            let BiomaPoints10 = properties10["Sudeste"] as? [String]
-            else { return }
-        guard
-            let properties11 = Brasil.plist(filename) as? [String: Any],
-            let BiomaPoints11 = properties11["Sul"] as? [String]
-            else { return }
     
        midCoordinate = Brasil.parseCoord(dict: properties1, fieldName: "midCoord")
     
@@ -137,36 +114,12 @@ class Brasil {
           latitude: CLLocationDegrees($0.x),
           longitude: CLLocationDegrees($0.y))
         }
-        
-        let cgPoints7 = BiomaPoints7.map { NSCoder.cgPoint(for: $0) }
-        Norte = cgPoints7.map { CLLocationCoordinate2D(
-           latitude: CLLocationDegrees($0.x),
-           longitude: CLLocationDegrees($0.y))
-               }
 
-        let cgPoints8 = BiomaPoints8.map { NSCoder.cgPoint(for: $0) }
-        Nordeste = cgPoints8.map { CLLocationCoordinate2D(
-            latitude: CLLocationDegrees($0.x),
-            longitude: CLLocationDegrees($0.y))
-               }
-               
-        let cgPoints9 = BiomaPoints9.map { NSCoder.cgPoint(for: $0) }
-        CentroOeste = cgPoints9.map { CLLocationCoordinate2D(
-            latitude: CLLocationDegrees($0.x),
-            longitude: CLLocationDegrees($0.y))
-               }
-               
-        let cgPoints10 = BiomaPoints10.map { NSCoder.cgPoint(for: $0) }
-        Sudeste = cgPoints10.map { CLLocationCoordinate2D(
-            latitude: CLLocationDegrees($0.x),
-            longitude: CLLocationDegrees($0.y))
-               }
-               
-        let cgPoints11 = BiomaPoints11.map { NSCoder.cgPoint(for: $0) }
-        Sul = cgPoints11.map { CLLocationCoordinate2D(
-            latitude: CLLocationDegrees($0.x),
-            longitude: CLLocationDegrees($0.y))
-               }
+//        let cgPoints8 = BiomaPoints8.map { NSCoder.cgPoint(for: $0) }
+//        Amazonas = cgPoints8.map { CLLocationCoordinate2D(
+//            latitude: CLLocationDegrees($0.x),
+//            longitude: CLLocationDegrees($0.y))
+//        }
 
 }
 
