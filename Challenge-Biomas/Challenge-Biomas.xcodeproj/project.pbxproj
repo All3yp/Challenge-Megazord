@@ -96,7 +96,6 @@
 		38AAB5072498FE8300118F7C /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				CE9D8F2D249BB297006D86BA /* MapViewController.swift */,
 				38AAB5092498FF5900118F7C /* InfoDesmatamentoViewController.swift */,
 			);
 			path = controller;
@@ -180,6 +179,7 @@
 				3A0D1190249A5A4F00672983 /* BioPoints.geojson */,
 				3A0D1199249B7B0800672983 /* EstatePoints.geojson */,
 				38AAB53524A39C9600118F7C /* LoadJson.swift */,
+				CE9D8F2D249BB297006D86BA /* MapViewController.swift */,
 				38AAB5082498FE8F00118F7C /* view */,
 				38AAB5072498FE8300118F7C /* controller */,
 				38AAB5062498FE7400118F7C /* model */,
@@ -462,7 +462,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 69B63K4DC3;
+				DEVELOPMENT_TEAM = D56NG2Q3UR;
 				INFOPLIST_FILE = "Challenge-Biomas/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -481,7 +481,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 69B63K4DC3;
+				DEVELOPMENT_TEAM = D56NG2Q3UR;
 				INFOPLIST_FILE = "Challenge-Biomas/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
