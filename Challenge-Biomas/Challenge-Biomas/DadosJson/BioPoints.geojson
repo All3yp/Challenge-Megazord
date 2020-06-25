@@ -6,7 +6,7 @@
       "properties": {
         "area": "2122km²",
         "title": "Pampa",
-        "number": 1,
+        "number": 2,
         "color": "tinbutton"
       },
       "geometry": {
@@ -21,7 +21,7 @@
       "properties": {
         "area": "1221km²",
         "title": "Amazônia",
-        "number": 2,
+        "number": 0,
         "color": ""
         
       },
@@ -67,7 +67,7 @@
          "properties": {
            "area": "1213km²",
            "title": "Caatinga",
-           "number": 5
+           "number": 1
            
          },
          "geometry": {
@@ -82,7 +82,7 @@
          "properties": {
            "area": "1213km²",
            "title": "Mata Atlântica",
-           "number": 6
+           "number": 5
            
          },
          "geometry": {

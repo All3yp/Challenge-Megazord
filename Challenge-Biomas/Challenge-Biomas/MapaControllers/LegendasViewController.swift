@@ -81,11 +81,18 @@ final class LegendasViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Networking.request { (info) in
+        Networking.requestLoiNames { (info) in
             guard let retornoInfo = info else { return }
 //            print(retornoInfo.lois.count)
             for loi in retornoInfo.lois {
                 print(loi.name, "\n")
+            }
+        }
+        
+        Networking.requestYears { (deforastation) in
+            guard let returnDeforastation = deforastation else { return }
+            for period in returnDeforastation.periods {
+//                print(period.startDate, "\n")
             }
         }
         
@@ -127,7 +134,7 @@ final class LegendasViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    //
+    //Mudança entre biomas e desmatamento
     @objc func changeColor(sender: UISegmentedControl) {
         
         print("selected \(sender.selectedSegmentIndex)")
@@ -148,10 +155,12 @@ final class LegendasViewController: UIViewController {
         }
         
         switch sender.selectedSegmentIndex {
+        case 0:
+            self.delegate?.exibir(.bioma)
         case 1:
             self.delegate?.exibir(.estados)
         default:
-            self.delegate?.exibir(.bioma)
+            break
         }
         
     }

@@ -13,13 +13,13 @@ import Contacts
 class Artwork: NSObject, MKAnnotation {
     let title: String?
     let area: String?
-    let number: String?
+    let number: Int?
     let coordinate: CLLocationCoordinate2D
   
     init(
         title: String?,
         area: String?,
-        number: String?,
+        number: Int?,
         coordinate: CLLocationCoordinate2D
       ) {
         self.title = title
@@ -45,7 +45,7 @@ class Artwork: NSObject, MKAnnotation {
         // 3
         title = properties["title"] as? String
         area = properties["area"] as? String
-        number = properties["number"] as? String
+        number = properties["number"] as? Int
         coordinate = point.coordinate
         super.init()
       }

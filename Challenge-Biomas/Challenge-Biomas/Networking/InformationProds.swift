@@ -28,3 +28,28 @@ struct LoiName: Decodable { // JSON mais interno
     let gid: Int
     let loiname: String
 }
+
+struct DeforestationJSON: Decodable {
+    let periods: [PeriodsJSON]
+}
+
+struct PeriodsJSON: Decodable {
+    let startDate: DateJSON
+    let endDate: DateJSON
+}
+
+struct DateJSON: Decodable {
+    let year: Int
+    let month: Int
+    let day: Int
+}
+
+enum ProdBiomas: String {
+
+     case prodes_pampa
+     case prodes_cerrado
+     case prodes_legal_amazon
+     case prodes_pantanal
+     case prodes_amazon
+
+ }

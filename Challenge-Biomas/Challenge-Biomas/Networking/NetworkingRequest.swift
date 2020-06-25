@@ -10,12 +10,19 @@ import Foundation
 
 
 class Networking {
-    
-    
+        
     
     static let route = "http://terrabrasilis.dpi.inpe.br/dashboard/api/v1/redis-cli/config/loinames"
     
-    var gid: Int
+    
+    static var gid: Int { //passar por parametro
+        get {
+            return 1
+        }
+        set {
+            
+        }
+    }
     
     static let yearsRoute = "http://terrabrasilis.dpi.inpe.br/dashboard/api/v1/redis-cli/data/deforestation/\(gid)"
     
@@ -58,8 +65,35 @@ class Networking {
     }
     
     
-    static func requestYears(completion: @escaping) {
+    static func requestYears(completion: @escaping (DeforestationJSON?) -> Void) {
         
+        var urlRequest = URLRequest(url: URL(string: yearsRoute)!)
+        urlRequest.httpMethod = "GET"
+        urlRequest.addValue(ProdBiomas.prodes_cerrado.rawValue, forHTTPHeaderField: "App-Identifier")
+//        urlRequest.forHTTPHeaderField: "App-Identifier"
+        
+        URLSession.shared.dataTask(with: urlRequest, completionHandler: {
+            data, response, error in
+            if let error = error {
+                print("Deu erro aq oh tio"+error.localizedDescription)
+                completion(nil)
+            }
+            guard let data = data else {
+                completion(nil)
+                return
+            }
+            
+            do {
+                let periodsJson = try JSONDecoder().decode(DeforestationJSON.self, from: data)
+                
+                completion(periodsJson)
+                
+            } catch {
+                print("Eeeeerro no parse: "+error.localizedDescription)
+                completion(nil)
+            }
+            
+        }).resume()
     }
 }
 
