@@ -1,0 +1,14 @@
+[
+    {
+        "id": "1",
+        "imagem": "amazonia",
+        "nome": "Amazônia",
+        "descricao": "Breve descrição sobre a amazonia e o seu desmatamento",
+    },
+    {
+        "id": "2",
+        "imagem": "amazonia",
+        "nome": "Amazônia",
+        "descricao": "Breve descrição sobre a amazonia e seu desmatamento",
+    }
+]

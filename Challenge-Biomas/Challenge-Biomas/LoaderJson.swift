@@ -10,18 +10,34 @@ import Foundation
 
 public class LoaderJson{
     var biomaData = [Bioma]()
+    var estadoData = [Estado]()
     
     init(){
-        load()
+        loadBioma()
+        loadEstados()
     }
     
-    func load(){
+    func loadBioma(){
         if let fileLocation = Bundle.main.url(forResource: "BiomasData", withExtension: "json"){
             do{
                 let data = try Data(contentsOf: fileLocation)
                 let jsonDecoder = JSONDecoder()
                 let dataFromJson = try jsonDecoder.decode([Bioma].self, from: data)
                 self.biomaData = dataFromJson
+            } catch{
+                print(error)
+            }
+        }
+    }
+    
+    func loadEstados() {
+    
+    if let fileLocation = Bundle.main.url(forResource: "EstadosData", withExtension: "json"){
+            do{
+                let data = try Data(contentsOf: fileLocation)
+                let jsonDecoder = JSONDecoder()
+                let dataFromJson = try jsonDecoder.decode([Estado].self, from: data)
+                self.estadoData = dataFromJson
             } catch{
                 print(error)
             }
