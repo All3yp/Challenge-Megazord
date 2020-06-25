@@ -19,6 +19,4 @@ class Section {
         self.description = description
     }
     
-    
-    
 }

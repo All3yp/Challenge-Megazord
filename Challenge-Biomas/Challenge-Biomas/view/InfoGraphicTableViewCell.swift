@@ -32,11 +32,11 @@ class InfoGraphicTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func set(entries: [ChartDataEntry], frame: CGRect, section: Section){
+    func set(entries: [ChartDataEntry], frame: CGRect, estado: Estado){
         self.entries = entries
         lineChart.frame = frame
-        title.text = section.title
-        descriptionText.text = section.description
+        title.text = estado.nome
+        descriptionText.text = estado.descricao
         configureBarChart()
     }
     
@@ -46,23 +46,52 @@ class InfoGraphicTableViewCell: UITableViewCell {
         lineChart.leftAxis.labelFont = UIFont.systemFont(ofSize: 8, weight: .semibold)
         lineChart.xAxis.labelPosition = .bottom
         //lineChart.leftAxis.setLabelCount(6, force: false)
-        lineChart.xAxis.setLabelCount(10, force: true)
+        //lineChart.xAxis.setLabelCount(10, force: true)
         lineChart.xAxis.labelFont = UIFont.systemFont(ofSize: 8, weight: .semibold)
         lineChart.animate(xAxisDuration: 2.5)
         
-        let dataSet = LineChartDataSet(entries: entries, label: "Medidas Anuais")
-        let mygreen = UIColor(displayP3Red: 180/255, green: 191/255, blue: 94/255, alpha: 1)
-        dataSet.setColors(UIColor.red)
-        dataSet.circleHoleColor = mygreen
-        dataSet.setCircleColors(mygreen)
-        dataSet.mode = .cubicBezier
-        dataSet.fill = Fill(color: mygreen)
-        dataSet.fillAlpha = 0.7
-        dataSet.drawFilledEnabled = true
-        dataSet.circleRadius = 7
+        var entries1 = [ChartDataEntry]()
+        var entries2 = [ChartDataEntry]()
+        for i in 0...entries.count - 1 {
+            
+            if i < entries.count{
+                
+                entries1.append(entries[i])
+            
+            }
+            if i >= entries.count - 2 {
+                
+                entries2.append(entries[i])
+                
+            }
+            
+        }
         
-        let data = LineChartData(dataSet: dataSet)
-        //data.setDrawValues(false)
+        
+        
+        
+        let dataSet1 = LineChartDataSet(entries: entries1, label: "Medidas Anuais")
+        let dataSet2 = LineChartDataSet(entries: entries2, label: "Último ano")
+        let mygreen = UIColor(displayP3Red: 180/255, green: 191/255, blue: 94/255, alpha: 1)
+        let myred = UIColor(displayP3Red: 191/255, green: 94/255, blue: 94/255, alpha: 1)
+        dataSet1.setColors(mygreen)
+        dataSet2.setColors(myred)
+        dataSet1.circleHoleColor = mygreen
+        dataSet2.circleHoleColor = myred
+        dataSet1.setCircleColors(mygreen)
+        dataSet2.setCircleColor(myred)
+        dataSet1.mode = .cubicBezier
+        dataSet2.mode = .cubicBezier
+        dataSet1.fill = Fill(color: mygreen)
+        dataSet2.fill = Fill(color: myred)
+        dataSet1.fillAlpha = 0.7
+        dataSet2.fillAlpha = 0.7
+        dataSet1.drawFilledEnabled = true
+        dataSet2.drawFilledEnabled = true
+        dataSet1.circleRadius = 7
+        dataSet2.circleRadius = 7
+        
+        let data = LineChartData(dataSets: [dataSet1, dataSet2])
         lineChart.data = data
         
         lineChart.translatesAutoresizingMaskIntoConstraints = false
@@ -70,7 +99,7 @@ class InfoGraphicTableViewCell: UITableViewCell {
         lineChart.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 32).isActive = true
         lineChart.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -32).isActive = true
         lineChart.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-        lineChart.heightAnchor.constraint(greaterThanOrEqualToConstant: 200).isActive = true
+        lineChart.heightAnchor.constraint(greaterThanOrEqualToConstant: 400).isActive = true
 
     }
     
@@ -102,8 +131,3 @@ class InfoGraphicTableViewCell: UITableViewCell {
     }
 
 }
-
-
-
-//pantanal, cerrado e mata atlantica
-
