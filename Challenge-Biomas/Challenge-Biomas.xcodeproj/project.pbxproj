@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,9 @@
 		3A0D119B249B920700672983 /* EstatePoints.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 3A0D1199249B7B0800672983 /* EstatePoints.geojson */; };
 		4FEDF0D52FBCDA0A3108DDB4 /* Pods_Challenge_BiomasTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B50EC0D447141494D3D9C868 /* Pods_Challenge_BiomasTests.framework */; };
 		6CA4576D9FDC9088BAAEB5B4 /* Pods_Challenge_Biomas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14062AB3FD02C5C34AD79C49 /* Pods_Challenge_Biomas.framework */; };
+		8816EA0724A54242004DA668 /* LoaderJsonTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8816EA0624A54242004DA668 /* LoaderJsonTest.swift */; };
+		8816EA0924A545A3004DA668 /* LoadGeoJsonTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8816EA0824A545A3004DA668 /* LoadGeoJsonTest.swift */; };
+		8816EA0B24A545ED004DA668 /* LoadGeoJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8816EA0A24A545ED004DA668 /* LoadGeoJson.swift */; };
 		884964A62497EF52000B86DF /* Bioma.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884964A52497EF52000B86DF /* Bioma.swift */; };
 		884964A92497F12C000B86DF /* BiomasData.json in Resources */ = {isa = PBXBuildFile; fileRef = 884964A82497F12C000B86DF /* BiomasData.json */; };
 		884964AD24980071000B86DF /* InfoBiomaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884964AC24980071000B86DF /* InfoBiomaViewController.swift */; };
@@ -31,7 +34,6 @@
 		88BAD32F24A52786003BE19F /* LoaderJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BAD32E24A52786003BE19F /* LoaderJson.swift */; };
 		88BAD33124A527EA003BE19F /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BAD33024A527EA003BE19F /* HeaderView.swift */; };
 		88ECF70124A3DBD200148CCB /* Challenge_BiomasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ECF70024A3DBD200148CCB /* Challenge_BiomasTests.swift */; };
-		88ECF70924A3DBF100148CCB /* InfoBiomaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ECF70824A3DBF100148CCB /* InfoBiomaView.swift */; };
 		CE9D8F2824997CBC006D86BA /* LegendasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9D8F2724997CBC006D86BA /* LegendasViewController.swift */; };
 		CE9D8F2E249BB297006D86BA /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9D8F2D249BB297006D86BA /* MapViewController.swift */; };
 		CE9D8F50249C44E9006D86BA /* GroupLegendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9D8F4F249C44E9006D86BA /* GroupLegendsView.swift */; };
@@ -62,6 +64,9 @@
 		3A0D1197249B0F4900672983 /* EstateArtwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstateArtwork.swift; sourceTree = "<group>"; };
 		3A0D1199249B7B0800672983 /* EstatePoints.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = EstatePoints.geojson; sourceTree = "<group>"; };
 		621AAA6EE60670471D2A8DA6 /* Pods-Challenge-Biomas.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Challenge-Biomas.release.xcconfig"; path = "Target Support Files/Pods-Challenge-Biomas/Pods-Challenge-Biomas.release.xcconfig"; sourceTree = "<group>"; };
+		8816EA0624A54242004DA668 /* LoaderJsonTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderJsonTest.swift; sourceTree = "<group>"; };
+		8816EA0824A545A3004DA668 /* LoadGeoJsonTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadGeoJsonTest.swift; sourceTree = "<group>"; };
+		8816EA0A24A545ED004DA668 /* LoadGeoJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadGeoJson.swift; sourceTree = "<group>"; };
 		884964A52497EF52000B86DF /* Bioma.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bioma.swift; sourceTree = "<group>"; };
 		884964A82497F12C000B86DF /* BiomasData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BiomasData.json; sourceTree = "<group>"; };
 		884964AC24980071000B86DF /* InfoBiomaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoBiomaViewController.swift; sourceTree = "<group>"; };
@@ -79,7 +84,6 @@
 		88ECF6FE24A3DBD200148CCB /* Challenge-BiomasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Challenge-BiomasTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		88ECF70024A3DBD200148CCB /* Challenge_BiomasTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge_BiomasTests.swift; sourceTree = "<group>"; };
 		88ECF70224A3DBD200148CCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		88ECF70824A3DBF100148CCB /* InfoBiomaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoBiomaView.swift; sourceTree = "<group>"; };
 		B50EC0D447141494D3D9C868 /* Pods_Challenge_BiomasTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Challenge_BiomasTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CABE716A5BD544005CB4C058 /* Pods-Challenge-Biomas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Challenge-Biomas.debug.xcconfig"; path = "Target Support Files/Pods-Challenge-Biomas/Pods-Challenge-Biomas.debug.xcconfig"; sourceTree = "<group>"; };
 		CE9D8F2724997CBC006D86BA /* LegendasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegendasViewController.swift; sourceTree = "<group>"; };
@@ -124,7 +128,6 @@
 				EA454843983CCD0BC665C6F6 /* Pods-Challenge-BiomasTests.debug.xcconfig */,
 				DD4D343A75461BE8E0D3CDBD /* Pods-Challenge-BiomasTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -155,7 +158,7 @@
 			path = Overlays;
 			sourceTree = "<group>";
 		};
-		884964EE24A27F89000B86DF /* InformaçõesControllers */ = {
+		884964EE24A27F89000B86DF /* InformaçõesControllers */ = {
 			isa = PBXGroup;
 			children = (
 				88BAD33024A527EA003BE19F /* HeaderView.swift */,
@@ -202,7 +205,8 @@
 		88ECF6FF24A3DBD200148CCB /* Challenge-BiomasTests */ = {
 			isa = PBXGroup;
 			children = (
-				88ECF70824A3DBF100148CCB /* InfoBiomaView.swift */,
+				8816EA0624A54242004DA668 /* LoaderJsonTest.swift */,
+				8816EA0824A545A3004DA668 /* LoadGeoJsonTest.swift */,
 				88ECF70024A3DBD200148CCB /* Challenge_BiomasTests.swift */,
 				88ECF70224A3DBD200148CCB /* Info.plist */,
 			);
@@ -247,7 +251,7 @@
 				3A0D11322497D64000672983 /* Overlays */,
 				3A0D11312497D61800672983 /* Models */,
 				3A0D112E2497C11000672983 /* infomation */,
-				884964EE24A27F89000B86DF /* InformaçõesControllers */,
+				884964EE24A27F89000B86DF /* InformaçõesControllers */,
 				884964F024A27FFD000B86DF /* MapaControllers */,
 				884964EF24A27FCF000B86DF /* DadosJson */,
 				CEAC8B912492B7130066F793 /* Assets.xcassets */,
@@ -255,6 +259,7 @@
 				CEAC8B962492B7130066F793 /* Info.plist */,
 				884964BC249A984E000B86DF /* InfoGeraisXib.xib */,
 				884964AE249814DE000B86DF /* UiViewExt.swift */,
+				8816EA0A24A545ED004DA668 /* LoadGeoJson.swift */,
 				88BAD32E24A52786003BE19F /* LoaderJson.swift */,
 				88521BE624A5312B00058BD9 /* Estado.swift */,
 			);
@@ -434,8 +439,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8816EA0724A54242004DA668 /* LoaderJsonTest.swift in Sources */,
+				8816EA0924A545A3004DA668 /* LoadGeoJsonTest.swift in Sources */,
 				88ECF70124A3DBD200148CCB /* Challenge_BiomasTests.swift in Sources */,
-				88ECF70924A3DBF100148CCB /* InfoBiomaView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,6 +458,7 @@
 				884964A62497EF52000B86DF /* Bioma.swift in Sources */,
 				884964B12498F545000B86DF /* InfoGeraisCell.swift in Sources */,
 				88BAD33124A527EA003BE19F /* HeaderView.swift in Sources */,
+				8816EA0B24A545ED004DA668 /* LoadGeoJson.swift in Sources */,
 				88BAD32F24A52786003BE19F /* LoaderJson.swift in Sources */,
 				88521BE524A5308200058BD9 /* InfoDesmatamentoViewController.swift in Sources */,
 				88521BE924A5318000058BD9 /* InfoGraphicTableViewCell.swift in Sources */,

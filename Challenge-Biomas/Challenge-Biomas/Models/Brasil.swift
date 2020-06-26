@@ -30,8 +30,7 @@ class Brasil {
         longitude: overlayTopRightCoordinate.longitude)
     }
     
-//    var AmazoniaColor: String
-
+    
     var overlayBoundingMapRect: MKMapRect {
         let topLeft = MKMapPoint(overlayTopLeftCoordinate)
         let topRight = MKMapPoint(overlayTopRightCoordinate)
@@ -77,8 +76,6 @@ class Brasil {
             else { return }
 
     
-       midCoordinate = Brasil.parseCoord(dict: properties1, fieldName: "midCoord")
-    
         let cgPoints1 = BiomaPoints1.map { NSCoder.cgPoint(for: $0) }
          Pampa = cgPoints1.map { CLLocationCoordinate2D(
            latitude: CLLocationDegrees($0.x),
@@ -115,12 +112,6 @@ class Brasil {
           longitude: CLLocationDegrees($0.y))
         }
 
-//        let cgPoints8 = BiomaPoints8.map { NSCoder.cgPoint(for: $0) }
-//        Amazonas = cgPoints8.map { CLLocationCoordinate2D(
-//            latitude: CLLocationDegrees($0.x),
-//            longitude: CLLocationDegrees($0.y))
-//        }
-
 }
 
 //Carrega o arquivo .plist
@@ -133,15 +124,5 @@ class Brasil {
     } catch {
       return nil
     }
-  }
-
-  static func parseCoord(dict: [String: Any], fieldName: String) -> CLLocationCoordinate2D {
-    if let coord = dict[fieldName] as? String {
-      let point = NSCoder.cgPoint(for: coord)
-      return CLLocationCoordinate2D(
-        latitude: CLLocationDegrees(point.x),
-        longitude: CLLocationDegrees(point.y))
-    }
-    return CLLocationCoordinate2D()
   }
 }

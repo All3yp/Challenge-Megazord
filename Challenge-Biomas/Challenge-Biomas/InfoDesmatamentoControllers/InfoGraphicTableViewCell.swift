@@ -68,18 +68,16 @@ class InfoGraphicTableViewCell: UITableViewCell {
         
         let dataSet1 = LineChartDataSet(entries: entries1, label: "Medidas Anuais")
         let dataSet2 = LineChartDataSet(entries: entries2, label: "Último ano")
-        let mygreen = UIColor(displayP3Red: 180/255, green: 191/255, blue: 94/255, alpha: 1)
-        let myred = UIColor(displayP3Red: 191/255, green: 94/255, blue: 94/255, alpha: 1)
-        dataSet1.setColors(mygreen)
-        dataSet2.setColors(myred)
-        dataSet1.circleHoleColor = mygreen
-        dataSet2.circleHoleColor = myred
-        dataSet1.setCircleColors(mygreen)
-        dataSet2.setCircleColor(myred)
+        dataSet1.setColors(UIColor(named: "mygreen")!)
+        dataSet2.setColors(UIColor(named: "myred")!)
+        dataSet1.circleHoleColor = UIColor(named: "mygreen")!
+        dataSet2.circleHoleColor = UIColor(named: "myred")!
+        dataSet1.setCircleColors(UIColor(named: "mygreen")!)
+        dataSet2.setCircleColor(UIColor(named: "myred")!)
         dataSet1.mode = .cubicBezier
         dataSet2.mode = .cubicBezier
-        dataSet1.fill = Fill(color: mygreen)
-        dataSet2.fill = Fill(color: myred)
+        dataSet1.fill = Fill(color: UIColor(named: "mygreen")!)
+        dataSet2.fill = Fill(color: UIColor(named: "myred")!)
         dataSet1.fillAlpha = 0.7
         dataSet2.fillAlpha = 0.7
         dataSet1.drawFilledEnabled = true

@@ -35,7 +35,7 @@ final class LegendasViewController: UIViewController {
         
         customSC.layer.cornerRadius = 5.0
 //        customSC.backgroundColor = UIColor.black
-        customSC.selectedSegmentTintColor = UIColor.init(named: "tintButton")
+        customSC.selectedSegmentTintColor = UIColor.init(named: "mygreen")
         customSC.addTarget(self, action: #selector(LegendasViewController.changeColor(sender:)), for: .valueChanged)
         
         return customSC
