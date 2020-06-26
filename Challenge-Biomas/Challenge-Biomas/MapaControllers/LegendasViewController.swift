@@ -34,8 +34,8 @@ final class LegendasViewController: UIViewController {
         
         
         customSC.layer.cornerRadius = 5.0
-        //        customSC.backgroundColor = UIColor.black
-        customSC.selectedSegmentTintColor = UIColor.init(named: "tintButton")
+//        customSC.backgroundColor = UIColor.black
+        customSC.selectedSegmentTintColor = UIColor.init(named: "mygreen")
         customSC.addTarget(self, action: #selector(LegendasViewController.changeColor(sender:)), for: .valueChanged)
         
         return customSC
@@ -85,14 +85,14 @@ final class LegendasViewController: UIViewController {
             guard let retornoInfo = info else { return }
 //            print(retornoInfo.lois.count)
             for loi in retornoInfo.lois {
-                print(loi.name, "\n")
+//                print(loi.name, "\n")
             }
         }
         
         Networking.requestYears { (deforastation) in
             guard let returnDeforastation = deforastation else { return }
             for period in returnDeforastation.periods {
-//                print(period.startDate, "\n")
+                print(period.startDate, "\n")
             }
         }
         

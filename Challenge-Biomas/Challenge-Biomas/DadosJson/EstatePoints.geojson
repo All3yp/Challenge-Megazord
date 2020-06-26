@@ -6,7 +6,7 @@
       "properties": {
         "area2": "2122km²",
         "title2": "Amazonas",
-        "number2": 1
+        "number2": 0
       },
       "geometry": {
         "type": "Point",
@@ -20,7 +20,7 @@
       "properties": {
         "area2": "1221km²",
         "title2": "Acre",
-        "number2": 2
+        "number2": 1
       },
       "geometry": {
         "type": "Point",
@@ -34,7 +34,7 @@
       "properties": {
         "area2": "1221km²",
         "title2": "Rondônia",
-        "number2": 3
+        "number2": 2
       },
       "geometry": {
         "type": "Point",
@@ -48,7 +48,7 @@
       "properties": {
         "area2": "1221km²",
         "title2": "Pará",
-        "number2": 4
+        "number2": 3
       },
       "geometry": {
         "type": "Point",
@@ -62,7 +62,7 @@
       "properties": {
         "area2": "1221km²",
         "title2": "Tocantins",
-        "number2": 5
+        "number2": 4
       },
       "geometry": {
         "type": "Point",
@@ -76,7 +76,7 @@
          "properties": {
            "area2": "1221km²",
            "title2": "Amapá",
-           "number2": 6
+           "number2": 5
          },
          "geometry": {
            "type": "Point",
@@ -90,7 +90,7 @@
          "properties": {
            "area2": "1221km²",
            "title2": "Roraima",
-           "number2": 7
+           "number2": 6
          },
          "geometry": {
            "type": "Point",
@@ -104,7 +104,7 @@
          "properties": {
            "area2": "1221km²",
            "title2": "Maranhão",
-           "number2": 11
+           "number2": 7
          },
          "geometry": {
            "type": "Point",
@@ -118,7 +118,7 @@
          "properties": {
            "area2": "1221km²",
            "title2": "Bahia",
-           "number2": 12
+           "number2": 8
          },
          "geometry": {
            "type": "Point",
@@ -132,7 +132,7 @@
          "properties": {
            "area2": "1221km²",
            "title2": "Piaui",
-           "number2": 13
+           "number2": 9
          },
          "geometry": {
            "type": "Point",
@@ -146,7 +146,7 @@
          "properties": {
            "area2": "1221km²",
            "title2": "Mato Grosso",
-           "number2": 20
+           "number2": 10
          },
          "geometry": {
            "type": "Point",
@@ -160,7 +160,7 @@
          "properties": {
            "area2": "1221km²",
            "title2": "Mato Grosso do Sul",
-           "number2": 21
+           "number2": 11
          },
          "geometry": {
            "type": "Point",
@@ -174,7 +174,7 @@
        "properties": {
          "area2": "1221km²",
          "title2": "Goiás",
-         "number2": 22
+         "number2": 12
        },
        "geometry": {
          "type": "Point",
@@ -188,7 +188,7 @@
        "properties": {
          "area2": "1221km²",
          "title2": "Distrito Federal",
-         "number2": 23
+         "number2": 13
        },
        "geometry": {
          "type": "Point",
@@ -202,7 +202,7 @@
        "properties": {
          "area2": "1221km²",
          "title2": "Minas Gerais",
-         "number2": 31
+         "number2": 14
        },
        "geometry": {
          "type": "Point",
@@ -216,7 +216,7 @@
        "properties": {
          "area2": "1221km²",
          "title2": "São Paulo",
-         "number2": 32
+         "number2": 15
        },
        "geometry": {
          "type": "Point",
@@ -230,7 +230,7 @@
        "properties": {
          "area2": "1221km²",
          "title2": "Paraná",
-         "number2": 41
+         "number2": 16
        },
        "geometry": {
          "type": "Point",
@@ -244,7 +244,7 @@
        "properties": {
          "area2": "1221km²",
          "title2": "Santa Catarina",
-         "number2": 42
+         "number2": 17
        },
        "geometry": {
          "type": "Point",
@@ -258,7 +258,7 @@
        "properties": {
          "area2": "1221km²",
          "title2": "Rio Grande do Sul",
-         "number2": 43
+         "number2": 18
        },
        "geometry": {
          "type": "Point",

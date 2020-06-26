@@ -9,65 +9,15 @@ import MapKit
 
 class MapViewController: UIViewController, MKMapViewDelegate {
     
-    private var artworks: [Artwork] = []
-    private var estateartworks: [EstateArtwork] = []
+    let artworks = LoadGeoJson().artworks
+    let estateartworks = LoadGeoJson().estateartworks
     let brasil = Brasil(filename: "BrasilCoord")
     let mapView = MKMapView()
     var tipo: Tipo = .bioma
     static var b: Int = -1
     var biomas: Biomas = .amazonia
     
-//    Função que carrega o geojson ao iniciar o aplicativo
-    private func loadInitialData() {
-      // 1
-      guard
-        let fileName = Bundle.main.url(forResource: "BioPoints", withExtension: "geojson")
 
-        else {
-          return
-      }
-
-      do {
-        // 2
-        let artworkData = try Data(contentsOf: fileName)
-        let features = try MKGeoJSONDecoder()
-          .decode(artworkData)
-          .compactMap { $0 as? MKGeoJSONFeature }
-        // 3
-        let validWorks = features.compactMap(Artwork.init)
-        // 4
-        artworks.append(contentsOf: validWorks)
-      } catch {
-        // 5
-        print("Unexpected error: \(error).")
-      }
-    }
-    
-    
-    private func loadInitialDataEstate() {
-      // 1
-      guard
-        let fileName2 = Bundle.main.url(forResource: "EstatePoints", withExtension: "geojson")
-
-        else {
-          return
-      }
-
-      do {
-        // 2
-        let artworkData2 = try Data(contentsOf: fileName2)
-        let features2 = try MKGeoJSONDecoder()
-          .decode(artworkData2)
-          .compactMap { $0 as? MKGeoJSONFeature }
-        // 3
-        let validWorks2 = features2.compactMap(EstateArtwork.init)
-        // 4
-        estateartworks.append(contentsOf: validWorks2)
-      } catch {
-        // 5
-        print("Unexpected error: \(error).")
-      }
-    }
     
     
     // Declara os botoes como propriedades lazy var antes do viewdidload
@@ -82,7 +32,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     //Botão de Informação
     lazy var infoButton: UIButton = {
         let button = UIButton(type: .infoLight)
-        button.tintColor = UIColor(named: "tintButton")
+        button.tintColor = UIColor(named: "mygreen")
         button.backgroundColor = .systemBackground
         button.layer.borderColor = UIColor(white: 0.75, alpha: 1).cgColor
         button.layer.borderWidth = 0.25
@@ -93,7 +43,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     lazy var arrowButton: UIButton = {
         let button = UIButton()
         button.setImage(UIImage(systemName: "location.fill"), for: .normal)
-        button.tintColor = UIColor(named: "tintButton")
+        button.tintColor = UIColor(named: "mygreen")
         button.backgroundColor = .systemBackground
         button.layer.borderColor = UIColor(white: 0.75, alpha: 1).cgColor
         button.layer.borderWidth = 0.25
@@ -103,9 +53,6 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
         mapView.isZoomEnabled = false
         mapView.isScrollEnabled = false
         mapView.isRotateEnabled = false
@@ -118,8 +65,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         view.addSubview(mapView)
         setupButtons()
         mapView.delegate = self
-        loadInitialData()
-        loadInitialDataEstate()
+        
         addBiomaBoundary()
         mapView.addAnnotations(artworks)
 
@@ -188,36 +134,33 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         reuseIdentifier: identifier)
         view.canShowCallout = true
         view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
-        view.rightCalloutAccessoryView?.tintColor = UIColor(named: "tintButton")
+        view.rightCalloutAccessoryView?.tintColor = UIColor(named: "mygreen")
         return view
     }
     
     //Função de click
    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
-    guard let artwork = view.annotation as? Artwork else {
-      return
+        if tipo == .bioma {
+        guard let artwork = view.annotation as? Artwork else {
+          return
+        }
+        MapViewController.b = artwork.number ?? -1
+        let vc = InfoBiomaViewController()
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true, completion: nil)
+    } else {
+        guard let estateArtwork = view.annotation as? EstateArtwork else{
+          return
+        }
+        MapViewController.b = estateArtwork.number ?? -1
+        let vc = InfoDesmatamentoViewController()
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true, completion: nil)
     }
-    MapViewController.b = artwork.number ?? -1
-    let vc = InfoBiomaViewController()
-    vc.modalPresentationStyle = .fullScreen
-    present(vc, animated: true, completion: nil)
+    
 }
-    
-
-     //Gera o polígono
-//    func mapView(_ map: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
-//        if overlay is MKPolygon {
-//            let polygonView = MKPolygonRenderer(overlay: overlay)
-//            polygonView.fillColor = UIColor(red: 0.0196, green: 0.447, blue: 0.0039, alpha: 1)
-//            polygonView.strokeColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
-//
-//            return polygonView
-//        }
-//
-//         return MKOverlayRenderer()
-//    }
-    
-//    é pra testar alteração aqui
+        
+//Gera polígono
    func mapView(_ map: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
            if overlay is MKPolygon {
                let polygonView = MKPolygonRenderer(overlay: overlay)
