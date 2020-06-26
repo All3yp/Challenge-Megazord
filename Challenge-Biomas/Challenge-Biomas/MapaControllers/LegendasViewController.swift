@@ -40,7 +40,7 @@ final class LegendasViewController: UIViewController {
         
         return customSC
     }()
-
+    
     
     lazy var backdropView: UIView = {
         let bdView = UIView(frame: self.view.bounds)
@@ -81,10 +81,25 @@ final class LegendasViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        Networking.requestLoiNames { (info) in
+            guard let retornoInfo = info else { return }
+//            print(retornoInfo.lois.count)
+            for loi in retornoInfo.lois {
+//                print(loi.name, "\n")
+            }
+        }
+        
+        Networking.requestYears { (deforastation) in
+            guard let returnDeforastation = deforastation else { return }
+            for period in returnDeforastation.periods {
+                print(period.startDate, "\n")
+            }
+        }
+        
         view.backgroundColor = .clear
         view.addSubview(backdropView)
         view.addSubview(menuView)
-    
+        
         
         
         menuView.backgroundColor = .white
@@ -121,12 +136,12 @@ final class LegendasViewController: UIViewController {
     
     //Mudança entre biomas e desmatamento
     @objc func changeColor(sender: UISegmentedControl) {
-
+        
         print("selected \(sender.selectedSegmentIndex)")
         
         // user default para salvar o index selecionado
         UserDefaults.standard.set(sender.selectedSegmentIndex, forKey: "MapSelectedIndex")
-
+        
         switch sender.selectedSegmentIndex {
         case 0:
             biomas.isHidden = false
@@ -147,7 +162,7 @@ final class LegendasViewController: UIViewController {
         default:
             break
         }
-
+        
     }
     
     func setupSegmented() {
@@ -172,7 +187,7 @@ final class LegendasViewController: UIViewController {
     
     
     
-
+    
 }
 
 

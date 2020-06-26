@@ -11,9 +11,7 @@
 		3A0D11342497D8AC00672983 /* Brasil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0D11332497D8AC00672983 /* Brasil.swift */; };
 		3A0D11362497D9D600672983 /* BrasilMapOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0D11352497D9D600672983 /* BrasilMapOverlay.swift */; };
 		3A0D113D2498F6AE00672983 /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0D113C2498F6AE00672983 /* Artwork.swift */; };
-		3A0D1191249A90D100672983 /* BioPoints.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 3A0D1190249A5A4F00672983 /* BioPoints.geojson */; };
 		3A0D1198249B0F4900672983 /* EstateArtwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0D1197249B0F4900672983 /* EstateArtwork.swift */; };
-		3A0D119B249B920700672983 /* EstatePoints.geojson in Resources */ = {isa = PBXBuildFile; fileRef = 3A0D1199249B7B0800672983 /* EstatePoints.geojson */; };
 		4FEDF0D52FBCDA0A3108DDB4 /* Pods_Challenge_BiomasTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B50EC0D447141494D3D9C868 /* Pods_Challenge_BiomasTests.framework */; };
 		6CA4576D9FDC9088BAAEB5B4 /* Pods_Challenge_Biomas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14062AB3FD02C5C34AD79C49 /* Pods_Challenge_Biomas.framework */; };
 		8816EA0724A54242004DA668 /* LoaderJsonTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8816EA0624A54242004DA668 /* LoaderJsonTest.swift */; };
@@ -34,14 +32,19 @@
 		88BAD32F24A52786003BE19F /* LoaderJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BAD32E24A52786003BE19F /* LoaderJson.swift */; };
 		88BAD33124A527EA003BE19F /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BAD33024A527EA003BE19F /* HeaderView.swift */; };
 		88ECF70124A3DBD200148CCB /* Challenge_BiomasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ECF70024A3DBD200148CCB /* Challenge_BiomasTests.swift */; };
-		CE9D8F2824997CBC006D86BA /* LegendasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9D8F2724997CBC006D86BA /* LegendasViewController.swift */; };
-		CE9D8F2E249BB297006D86BA /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9D8F2D249BB297006D86BA /* MapViewController.swift */; };
-		CE9D8F50249C44E9006D86BA /* GroupLegendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9D8F4F249C44E9006D86BA /* GroupLegendsView.swift */; };
-		CE9D8F52249C4AE2006D86BA /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE9D8F51249C4AE2006D86BA /* ItemView.swift */; };
+		CE11800924A4F44C003A24CE /* NetworkingRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11800824A4F44C003A24CE /* NetworkingRequest.swift */; };
+		CE11800C24A4F48F003A24CE /* InformationProds.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11800B24A4F48F003A24CE /* InformationProds.swift */; };
+		CE11801124A552F7003A24CE /* LegendasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11800D24A552F7003A24CE /* LegendasViewController.swift */; };
+		CE11801224A552F7003A24CE /* GroupLegendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11800E24A552F7003A24CE /* GroupLegendsView.swift */; };
+		CE11801324A552F7003A24CE /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11800F24A552F7003A24CE /* MapViewController.swift */; };
+		CE11801424A552F7003A24CE /* (null) in Sources */ = {isa = PBXBuildFile; };
+		CE11801624A553A8003A24CE /* BioPoints.geojson in Resources */ = {isa = PBXBuildFile; fileRef = CE11801524A553A8003A24CE /* BioPoints.geojson */; };
+		CE11801824A553BA003A24CE /* EstatePoints.geojson in Resources */ = {isa = PBXBuildFile; fileRef = CE11801724A553BA003A24CE /* EstatePoints.geojson */; };
 		CEAC8B892492B70E0066F793 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAC8B882492B70E0066F793 /* AppDelegate.swift */; };
 		CEAC8B8B2492B70E0066F793 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAC8B8A2492B70E0066F793 /* SceneDelegate.swift */; };
 		CEAC8B922492B7130066F793 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEAC8B912492B7130066F793 /* Assets.xcassets */; };
 		CEAC8B952492B7130066F793 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEAC8B932492B7130066F793 /* LaunchScreen.storyboard */; };
+		CED1CCC824A6899200453C68 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED1CCC724A6899200453C68 /* ItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,9 +63,7 @@
 		3A0D11332497D8AC00672983 /* Brasil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brasil.swift; sourceTree = "<group>"; };
 		3A0D11352497D9D600672983 /* BrasilMapOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrasilMapOverlay.swift; sourceTree = "<group>"; };
 		3A0D113C2498F6AE00672983 /* Artwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
-		3A0D1190249A5A4F00672983 /* BioPoints.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = BioPoints.geojson; sourceTree = "<group>"; };
 		3A0D1197249B0F4900672983 /* EstateArtwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstateArtwork.swift; sourceTree = "<group>"; };
-		3A0D1199249B7B0800672983 /* EstatePoints.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = EstatePoints.geojson; sourceTree = "<group>"; };
 		621AAA6EE60670471D2A8DA6 /* Pods-Challenge-Biomas.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Challenge-Biomas.release.xcconfig"; path = "Target Support Files/Pods-Challenge-Biomas/Pods-Challenge-Biomas.release.xcconfig"; sourceTree = "<group>"; };
 		8816EA0624A54242004DA668 /* LoaderJsonTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderJsonTest.swift; sourceTree = "<group>"; };
 		8816EA0824A545A3004DA668 /* LoadGeoJsonTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadGeoJsonTest.swift; sourceTree = "<group>"; };
@@ -86,16 +87,20 @@
 		88ECF70224A3DBD200148CCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B50EC0D447141494D3D9C868 /* Pods_Challenge_BiomasTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Challenge_BiomasTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CABE716A5BD544005CB4C058 /* Pods-Challenge-Biomas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Challenge-Biomas.debug.xcconfig"; path = "Target Support Files/Pods-Challenge-Biomas/Pods-Challenge-Biomas.debug.xcconfig"; sourceTree = "<group>"; };
-		CE9D8F2724997CBC006D86BA /* LegendasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegendasViewController.swift; sourceTree = "<group>"; };
-		CE9D8F2D249BB297006D86BA /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		CE9D8F4F249C44E9006D86BA /* GroupLegendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupLegendsView.swift; sourceTree = "<group>"; };
-		CE9D8F51249C4AE2006D86BA /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
+		CE11800824A4F44C003A24CE /* NetworkingRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingRequest.swift; sourceTree = "<group>"; };
+		CE11800B24A4F48F003A24CE /* InformationProds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationProds.swift; sourceTree = "<group>"; };
+		CE11800D24A552F7003A24CE /* LegendasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LegendasViewController.swift; sourceTree = "<group>"; };
+		CE11800E24A552F7003A24CE /* GroupLegendsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupLegendsView.swift; sourceTree = "<group>"; };
+		CE11800F24A552F7003A24CE /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		CE11801524A553A8003A24CE /* BioPoints.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BioPoints.geojson; sourceTree = "<group>"; };
+		CE11801724A553BA003A24CE /* EstatePoints.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EstatePoints.geojson; sourceTree = "<group>"; };
 		CEAC8B852492B70E0066F793 /* Challenge-Biomas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Challenge-Biomas.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEAC8B882492B70E0066F793 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEAC8B8A2492B70E0066F793 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CEAC8B912492B7130066F793 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEAC8B942492B7130066F793 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEAC8B962492B7130066F793 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CED1CCC724A6899200453C68 /* ItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
 		DD4D343A75461BE8E0D3CDBD /* Pods-Challenge-BiomasTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Challenge-BiomasTests.release.xcconfig"; path = "Target Support Files/Pods-Challenge-BiomasTests/Pods-Challenge-BiomasTests.release.xcconfig"; sourceTree = "<group>"; };
 		EA454843983CCD0BC665C6F6 /* Pods-Challenge-BiomasTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Challenge-BiomasTests.debug.xcconfig"; path = "Target Support Files/Pods-Challenge-BiomasTests/Pods-Challenge-BiomasTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -173,9 +178,9 @@
 		884964EF24A27FCF000B86DF /* DadosJson */ = {
 			isa = PBXGroup;
 			children = (
-				3A0D1190249A5A4F00672983 /* BioPoints.geojson */,
-				3A0D1199249B7B0800672983 /* EstatePoints.geojson */,
 				884964A82497F12C000B86DF /* BiomasData.json */,
+				CE11801724A553BA003A24CE /* EstatePoints.geojson */,
+				CE11801524A553A8003A24CE /* BioPoints.geojson */,
 				88521BEC24A5322C00058BD9 /* EstadosData.json */,
 			);
 			path = DadosJson;
@@ -184,10 +189,10 @@
 		884964F024A27FFD000B86DF /* MapaControllers */ = {
 			isa = PBXGroup;
 			children = (
-				CE9D8F2D249BB297006D86BA /* MapViewController.swift */,
-				CE9D8F4F249C44E9006D86BA /* GroupLegendsView.swift */,
-				CE9D8F2724997CBC006D86BA /* LegendasViewController.swift */,
-				CE9D8F51249C4AE2006D86BA /* ItemView.swift */,
+				CED1CCC724A6899200453C68 /* ItemView.swift */,
+				CE11800E24A552F7003A24CE /* GroupLegendsView.swift */,
+				CE11800D24A552F7003A24CE /* LegendasViewController.swift */,
+				CE11800F24A552F7003A24CE /* MapViewController.swift */,
 			);
 			path = MapaControllers;
 			sourceTree = "<group>";
@@ -222,6 +227,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CE11800A24A4F463003A24CE /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				CE11800824A4F44C003A24CE /* NetworkingRequest.swift */,
+				CE11800B24A4F48F003A24CE /* InformationProds.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		CEAC8B7C2492B70E0066F793 = {
 			isa = PBXGroup;
 			children = (
@@ -246,11 +260,12 @@
 			isa = PBXGroup;
 			children = (
 				88521BE324A52FDB00058BD9 /* InfoDesmatamentoControllers */,
-				CEAC8B882492B70E0066F793 /* AppDelegate.swift */,
-				CEAC8B8A2492B70E0066F793 /* SceneDelegate.swift */,
 				3A0D11322497D64000672983 /* Overlays */,
 				3A0D11312497D61800672983 /* Models */,
 				3A0D112E2497C11000672983 /* infomation */,
+				CE11800A24A4F463003A24CE /* Networking */,
+				CEAC8B882492B70E0066F793 /* AppDelegate.swift */,
+				CEAC8B8A2492B70E0066F793 /* SceneDelegate.swift */,
 				884964EE24A27F89000B86DF /* InformaçõesControllers */,
 				884964F024A27FFD000B86DF /* MapaControllers */,
 				884964EF24A27FCF000B86DF /* DadosJson */,
@@ -359,12 +374,12 @@
 			files = (
 				884964BD249A984E000B86DF /* InfoGeraisXib.xib in Resources */,
 				884964A92497F12C000B86DF /* BiomasData.json in Resources */,
-				3A0D1191249A90D100672983 /* BioPoints.geojson in Resources */,
-				3A0D119B249B920700672983 /* EstatePoints.geojson in Resources */,
 				3A0D11302497C19A00672983 /* BrasilCoord.plist in Resources */,
 				88521BED24A5322C00058BD9 /* EstadosData.json in Resources */,
 				CEAC8B952492B7130066F793 /* LaunchScreen.storyboard in Resources */,
 				CEAC8B922492B7130066F793 /* Assets.xcassets in Resources */,
+				CE11801824A553BA003A24CE /* EstatePoints.geojson in Resources */,
+				CE11801624A553A8003A24CE /* BioPoints.geojson in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,6 +469,8 @@
 				88521BEB24A531AB00058BD9 /* TableViewHeader.swift in Sources */,
 				88521BE724A5312B00058BD9 /* Estado.swift in Sources */,
 				884964B924991395000B86DF /* InfoEspecificaCell.swift in Sources */,
+				CE11801324A552F7003A24CE /* MapViewController.swift in Sources */,
+				CE11801424A552F7003A24CE /* (null) in Sources */,
 				884964AD24980071000B86DF /* InfoBiomaViewController.swift in Sources */,
 				884964A62497EF52000B86DF /* Bioma.swift in Sources */,
 				884964B12498F545000B86DF /* InfoGeraisCell.swift in Sources */,
@@ -462,13 +479,14 @@
 				88BAD32F24A52786003BE19F /* LoaderJson.swift in Sources */,
 				88521BE524A5308200058BD9 /* InfoDesmatamentoViewController.swift in Sources */,
 				88521BE924A5318000058BD9 /* InfoGraphicTableViewCell.swift in Sources */,
-				CE9D8F2824997CBC006D86BA /* LegendasViewController.swift in Sources */,
 				CEAC8B892492B70E0066F793 /* AppDelegate.swift in Sources */,
-				CE9D8F50249C44E9006D86BA /* GroupLegendsView.swift in Sources */,
-				CE9D8F52249C4AE2006D86BA /* ItemView.swift in Sources */,
-				CE9D8F2E249BB297006D86BA /* MapViewController.swift in Sources */,
+				CE11801124A552F7003A24CE /* LegendasViewController.swift in Sources */,
 				3A0D1198249B0F4900672983 /* EstateArtwork.swift in Sources */,
 				3A0D11342497D8AC00672983 /* Brasil.swift in Sources */,
+				CE11800924A4F44C003A24CE /* NetworkingRequest.swift in Sources */,
+				CE11801224A552F7003A24CE /* GroupLegendsView.swift in Sources */,
+				CE11800C24A4F48F003A24CE /* InformationProds.swift in Sources */,
+				CED1CCC824A6899200453C68 /* ItemView.swift in Sources */,
 				3A0D11362497D9D600672983 /* BrasilMapOverlay.swift in Sources */,
 				CEAC8B892492B70E0066F793 /* AppDelegate.swift in Sources */,
 				3A0D113D2498F6AE00672983 /* Artwork.swift in Sources */,
