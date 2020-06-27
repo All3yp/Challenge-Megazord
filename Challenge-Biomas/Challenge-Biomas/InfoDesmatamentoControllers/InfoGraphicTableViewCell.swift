@@ -9,7 +9,6 @@ import Charts
 import UIKit
 
 class InfoGraphicTableViewCell: UITableViewCell {
-    
     var title = UILabel()
     var descriptionText = UILabel()
     static let identifier = "InfoGraphicTableViewCell"
@@ -31,39 +30,37 @@ class InfoGraphicTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func set(entries: [ChartDataEntry], frame: CGRect, estado: Estado){
+    func set(entries: [ChartDataEntry], frame: CGRect, estado: Estado, nome: String){
         self.entries = entries
         lineChart.frame = frame
-        title.text = estado.nome
-        descriptionText.text = estado.descricao
+        title.text = nome
+        descriptionText.text = "Gráfico sobre área total, em km², desmatada do bioma \(nome) no estado \(estado.nome) em relação aos anos."
         configureBarChart()
     }
     
     func configureBarChart(){
         
         lineChart.rightAxis.enabled = false
-        lineChart.leftAxis.labelFont = UIFont.systemFont(ofSize: 8, weight: .semibold)
+        lineChart.leftAxis.labelFont = UIFont.systemFont(ofSize: 11, weight: .semibold)
         lineChart.xAxis.labelPosition = .bottom
-        //lineChart.leftAxis.setLabelCount(6, force: false)
-        //lineChart.xAxis.setLabelCount(10, force: true)
-        lineChart.xAxis.labelFont = UIFont.systemFont(ofSize: 8, weight: .semibold)
+        lineChart.xAxis.labelFont = UIFont.systemFont(ofSize: 11, weight: .semibold)
         lineChart.animate(xAxisDuration: 2.5)
         
         var entries1 = [ChartDataEntry]()
         var entries2 = [ChartDataEntry]()
         for i in 0...entries.count - 1 {
-            
+
             if i < entries.count{
-                
+
                 entries1.append(entries[i])
-            
+
             }
             if i >= entries.count - 2 {
-                
+
                 entries2.append(entries[i])
-                
+
             }
-            
+
         }
         
         let dataSet1 = LineChartDataSet(entries: entries1, label: "Medidas Anuais")

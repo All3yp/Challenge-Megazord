@@ -12,6 +12,5 @@ struct Estado: Codable{
     
     let imagem: String
     let nome: String
-    let descricao: String
-    
+//    let descricao: String
 }

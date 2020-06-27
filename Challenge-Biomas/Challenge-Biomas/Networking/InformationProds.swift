@@ -57,13 +57,13 @@ struct FeaturesJSON: Decodable {
 
 struct AreasFeatureJson: Decodable {
     let type: Int
-    let area: Double
+    var area: Double
 }
 
 //MARK: - Modelo para o Gráfico
 struct GraphicPoint {
     let yearMonth: Double
-    let area: Double
+    var area: Double
 }
 
 struct GraphicData {
@@ -80,6 +80,5 @@ enum ProdBiomas: String, CaseIterable {
      case prodes_cerrado
      case prodes_legal_amazon
      case prodes_pantanal
-     case prodes_amazon
 
  }

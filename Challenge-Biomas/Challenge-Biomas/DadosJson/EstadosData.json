@@ -1,116 +1,81 @@
 [
     {
-        "id": "1",
-        "imagem": "amazonia",
-        "nome": "Amazonas",
-        "descricao": "Breve descrição sobre a amazonia e o seu desmatamento",
+        "imagem": "amazonas",
+        "nome": "Amazonas"
     },
     {
-        "id": "2",
-        "imagem": "amazonia",
-        "nome": "Acre",
-        "descricao": "Breve descrição sobre a amazonia e seu desmatamento",
+        "imagem": "acre",
+        "nome": "Acre"
     },
     {
-        "id": "3",
-        "imagem": "amazonia",
-        "nome": "Rondônia",
-        "descricao": "Breve descrição sobre a amazonia e seu desmatamento",
+        "imagem": "rondonia",
+        "nome": "Rondônia"
     },
     {
-        "id": "4",
-        "imagem": "amazonia",
-        "nome": "Pará",
-        "descricao": "Breve descrição sobre a amazonia e seu desmatamento",
+        "imagem": "para",
+        "nome": "Pará"
     },
     {
-        "id": "5",
-        "imagem": "amazonia",
-        "nome": "Tocantins",
-        "descricao": "Breve descrição sobre a amazonia e seu desmatamento",
+        "imagem": "tocantins",
+        "nome": "Tocantins"
     },
     {
-        "id": "6",
-        "imagem": "amazonia",
-        "nome": "Amapá",
-        "descricao": "Breve descrição sobre a amazonia e seu desmatamento",
+        "imagem": "amapa",
+        "nome": "Amapá"
     },
     {
-        "id": "7",
-        "imagem": "amazonia",
-        "nome": "Roraima",
-        "descricao": "Breve descrição sobre a amazonia e seu desmatamento",
+        "imagem": "roraima",
+        "nome": "Roraima"
     },
     {
-        "id": "11",
-        "imagem": "amazonia",
-        "nome": "Maranhão",
-        "descricao": "Breve descrição sobre a amazonia e seu desmatamento",
+        "imagem": "maranhao",
+        "nome": "Maranhão"
     },
     {
-        "id": "12",
-        "imagem": "amazonia",
-        "nome": "Bahia",
-        "descricao": "Breve descrição sobre a amazonia e seu desmatamento",
+        "imagem": "bahia",
+        "nome": "Bahia"
     },
     {
-        "id": "13",
-        "imagem": "amazonia",
+        "imagem": "piaui",
         "nome": "Piauí",
-        "descricao": "Breve descrição sobre a amazonia e seu desmatamento",
     },
     {
-        "id": "21",
-        "imagem": "amazonia",
-        "nome": "Mato Grosso",
-        "descricao": "Breve descrição sobre a amazonia e seu desmatamento",
+        "imagem": "matogrosso",
+        "nome": "Mato Grosso"
     },
     {
-        "id": "22",
-        "imagem": "amazonia",
-        "nome": "Mato Grosso do Sul",
-        "descricao": "Breve descrição sobre a amazonia e seu desmatamento",
+        "imagem": "matogrossodosul",
+        "nome": "Mato Grosso do Sul"
     },
     {
-        "id": "23",
-        "imagem": "amazonia",
-        "nome": "Goiás",
-        "descricao": "Breve descrição sobre a amazonia e seu desmatamento",
+        "imagem": "goias",
+        "nome": "Goiás"
+
     },
     {
-        "id": "31",
-        "imagem": "amazonia",
-        "nome": "Distrito Federal",
-        "descricao": "Breve descrição sobre a amazonia e seu desmatamento",
+        "imagem": "distritofederal",
+        "nome": "Distrito Federal"
+
     },
     {
-        "id": "31",
-        "imagem": "amazonia",
-        "nome": "Minas Gerais",
-        "descricao": "Breve descrição sobre a amazonia e seu desmatamento",
+        "imagem": "minasgerais",
+        "nome": "Minas Gerais"
+
     },
     {
-        "id": "32",
-        "imagem": "amazonia",
-        "nome": "São Paulo",
-        "descricao": "Breve descrição sobre a amazonia e seu desmatamento",
+        "imagem": "saopaulo",
+        "nome": "São Paulo"
     },
     {
-        "id": "41",
-        "imagem": "amazonia",
-        "nome": "Paraná",
-        "descricao": "Breve descrição sobre a amazonia e seu desmatamento",
+        "imagem": "parana",
+        "nome": "Paraná"
     },
     {
-        "id": "42",
-        "imagem": "amazonia",
-        "nome": "Santa Catarina",
-        "descricao": "Breve descrição sobre a amazonia e seu desmatamento",
+        "imagem": "santacatarina",
+        "nome": "Santa Catarina"
     },
     {
-        "id": "43",
-        "imagem": "amazonia",
-        "nome": "Rio Grande do Sul",
-        "descricao": "Breve descrição sobre a amazonia e seu desmatamento",
+        "imagem": "riograndedosul",
+        "nome": "Rio Grande do Sul"
     },
 ]

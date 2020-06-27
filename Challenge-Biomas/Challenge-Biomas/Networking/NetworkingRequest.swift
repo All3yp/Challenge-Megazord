@@ -47,22 +47,22 @@ class Networking {
             }
             print("Status Code: \(response.statusCode)")
             
-            guard let data = data else {
-                print("Data veio nulo")
-                completion(nil)
-                return
-                
+            DispatchQueue.main.async{
+                guard let data = data else {
+                    print("Data veio nulo")
+                    completion(nil)
+                    return
+                }
+                //print(String(bytes: data, encoding: .utf8))
+                do {
+                    let loisJson = try JSONDecoder().decode(LoisNameJson.self, from: data)
+                    completion(loisJson)
+                    
+                } catch {
+                    print("Erro no parse: "+error.localizedDescription)
+                    completion(nil)
+                }
             }
-            //print(String(bytes: data, encoding: .utf8))
-            do {
-                let loisJson = try JSONDecoder().decode(LoisNameJson.self, from: data)
-                completion(loisJson)
-                
-            } catch {
-                print("Erro no parse: "+error.localizedDescription)
-                completion(nil)
-            }
-            
             
         }).resume()
         
@@ -90,19 +90,21 @@ class Networking {
             }
             print("Status Code: \(response.statusCode)")
             
-            guard let data = data else {
-                print("Data veio nulo")
-                completion(nil)
-                return
-            }
-            
-            do {
-                let deforestationJson = try JSONDecoder().decode(DeforestationJSON.self, from: data)
-                completion(deforestationJson)
+            DispatchQueue.main.async{
+                guard let data = data else {
+                    print("Data veio nulo")
+                    completion(nil)
+                    return
+                }
                 
-            } catch {
-                print("Eeeeerro no parse: "+error.localizedDescription)
-                completion(nil)
+                do {
+                    let deforestationJson = try JSONDecoder().decode(DeforestationJSON.self, from: data)
+                    completion(deforestationJson)
+                    
+                } catch {
+                    print("Eeeeerro no parse: "+error.localizedDescription)
+                    completion(nil)
+                }
             }
             
         }).resume()
@@ -154,7 +156,7 @@ class Networking {
                     for feature in period.features {
                         for areaFeature in feature.areas {
                             
-                            if areaFeature.type == 1 {
+                            if areaFeature.type == 2 {
                                 
                                 let yearMonthString = "\(period.startDate.year).\(period.startDate.month)"
                                 
@@ -164,14 +166,14 @@ class Networking {
                                 
                                 
                                 
-                            } else if areaFeature.type == 2 {
-                                let yearMonthString = "\(period.endDate.year).\(period.endDate.month)"
-                                
-                                let graphicPoint = GraphicPoint(yearMonth: Double(yearMonthString)!, area: areaFeature.area)
-                                
-                                graphicData.points.append(graphicPoint)
-                                
-                                
+//                            } else if areaFeature.type == 2 {
+//                                let yearMonthString = "\(period.endDate.year).\(period.endDate.month)"
+//
+//                                let graphicPoint = GraphicPoint(yearMonth: Double(yearMonthString)!, area: areaFeature.area)
+//
+//                                graphicData.points.append(graphicPoint)
+//
+//
                             }
                             
                         }
