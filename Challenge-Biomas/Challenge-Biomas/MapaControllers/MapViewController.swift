@@ -203,7 +203,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
                     polygonView.fillColor = UIColor(red: 0.976, green: 0.756, blue: 0.341, alpha: 1)
                     polygonView.strokeColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
                 case .caatinga:
-                    polygonView.fillColor = UIColor(red: 0.7, green: 0.3, blue: 0.3, alpha: 1)
+                    polygonView.fillColor = UIColor(red: 0.949, green: 0.729, blue: 0.674, alpha: 1)
                     polygonView.strokeColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
                 case .cerrado:
                     polygonView.fillColor = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5)
