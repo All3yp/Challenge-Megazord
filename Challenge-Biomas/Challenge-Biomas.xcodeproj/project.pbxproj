@@ -14,6 +14,7 @@
 		3A0D1198249B0F4900672983 /* EstateArtwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0D1197249B0F4900672983 /* EstateArtwork.swift */; };
 		4FEDF0D52FBCDA0A3108DDB4 /* Pods_Challenge_BiomasTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B50EC0D447141494D3D9C868 /* Pods_Challenge_BiomasTests.framework */; };
 		6CA4576D9FDC9088BAAEB5B4 /* Pods_Challenge_Biomas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14062AB3FD02C5C34AD79C49 /* Pods_Challenge_Biomas.framework */; };
+		8805884824A9265C00095030 /* GetAllGraphicsDataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8805884724A9265C00095030 /* GetAllGraphicsDataTest.swift */; };
 		8816EA0724A54242004DA668 /* LoaderJsonTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8816EA0624A54242004DA668 /* LoaderJsonTest.swift */; };
 		8816EA0924A545A3004DA668 /* LoadGeoJsonTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8816EA0824A545A3004DA668 /* LoadGeoJsonTest.swift */; };
 		8816EA0B24A545ED004DA668 /* LoadGeoJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8816EA0A24A545ED004DA668 /* LoadGeoJson.swift */; };
@@ -65,6 +66,7 @@
 		3A0D113C2498F6AE00672983 /* Artwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
 		3A0D1197249B0F4900672983 /* EstateArtwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstateArtwork.swift; sourceTree = "<group>"; };
 		621AAA6EE60670471D2A8DA6 /* Pods-Challenge-Biomas.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Challenge-Biomas.release.xcconfig"; path = "Target Support Files/Pods-Challenge-Biomas/Pods-Challenge-Biomas.release.xcconfig"; sourceTree = "<group>"; };
+		8805884724A9265C00095030 /* GetAllGraphicsDataTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllGraphicsDataTest.swift; sourceTree = "<group>"; };
 		8816EA0624A54242004DA668 /* LoaderJsonTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderJsonTest.swift; sourceTree = "<group>"; };
 		8816EA0824A545A3004DA668 /* LoadGeoJsonTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadGeoJsonTest.swift; sourceTree = "<group>"; };
 		8816EA0A24A545ED004DA668 /* LoadGeoJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadGeoJson.swift; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 		88ECF6FF24A3DBD200148CCB /* Challenge-BiomasTests */ = {
 			isa = PBXGroup;
 			children = (
+				8805884724A9265C00095030 /* GetAllGraphicsDataTest.swift */,
 				8816EA0624A54242004DA668 /* LoaderJsonTest.swift */,
 				8816EA0824A545A3004DA668 /* LoadGeoJsonTest.swift */,
 				88ECF70024A3DBD200148CCB /* Challenge_BiomasTests.swift */,
@@ -457,6 +460,7 @@
 				8816EA0724A54242004DA668 /* LoaderJsonTest.swift in Sources */,
 				8816EA0924A545A3004DA668 /* LoadGeoJsonTest.swift in Sources */,
 				88ECF70124A3DBD200148CCB /* Challenge_BiomasTests.swift in Sources */,
+				8805884824A9265C00095030 /* GetAllGraphicsDataTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
