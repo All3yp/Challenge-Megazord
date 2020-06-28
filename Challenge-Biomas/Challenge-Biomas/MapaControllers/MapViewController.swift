@@ -17,7 +17,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     static var b: Int = -1
     var biomas: Biomas = .amazonia
     
-
+    
     
     
     // Declara os botoes como propriedades lazy var antes do viewdidload
@@ -39,7 +39,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         button.addTarget(self, action: #selector(buttonActionInfo), for: .touchUpInside)
         return button
     }()
-
+    
     lazy var arrowButton: UIButton = {
         let button = UIButton()
         button.setImage(UIImage(systemName: "location.fill"), for: .normal)
@@ -68,30 +68,55 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         
         addBiomaBoundary()
         mapView.addAnnotations(artworks)
-
-}
+        
+        // retorna o valor selecionado na segmented
+        guard let selectedIndex = UserDefaults.standard.value(forKey: "MapSelectedIndex") as? Int else {
+            return // selected index n tinha nada
+        }
+        
+        switch selectedIndex {
+        case 0:
+            self.tipo = .bioma // se for 0, tipo do mapa é bioma
+            mapView.removeOverlays(mapView.overlays)
+            mapView.removeAnnotations(estateartworks)
+            addBiomaBoundary()
+            mapView.addAnnotations(artworks)
+            break
+        case 1:
+            self.tipo = .estados // se o 1 tipo do mapa for estado
+            mapView.removeOverlays(mapView.overlays)
+            addEstadoBoundary()
+            mapView.removeAnnotations(artworks)
+            mapView.addAnnotations(estateartworks)
+            break
+        default:
+            break
+        }
+  
+        
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-
+        
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
     }
-        
+    
     
     func setupButtons() {
         self.view.addSubview(buttonsBackgroundView)
         self.buttonsBackgroundView.addSubview(infoButton)
         self.buttonsBackgroundView.addSubview(arrowButton)
         self.buttonsBackgroundView.clipsToBounds = true
-
+        
         self.buttonsBackgroundView.translatesAutoresizingMaskIntoConstraints = false
         self.infoButton.translatesAutoresizingMaskIntoConstraints = false
         self.arrowButton.translatesAutoresizingMaskIntoConstraints = false
-
+        
         NSLayoutConstraint.activate([
             self.infoButton.widthAnchor.constraint(equalToConstant: 50),
             self.infoButton.heightAnchor.constraint(equalToConstant: 50),
@@ -101,13 +126,13 @@ class MapViewController: UIViewController, MKMapViewDelegate {
             self.arrowButton.heightAnchor.constraint(equalToConstant: 50),
             self.arrowButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -25),
             self.arrowButton.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 100),
-
+            
             self.buttonsBackgroundView.widthAnchor.constraint(equalToConstant: 50),
             self.buttonsBackgroundView.heightAnchor.constraint(equalToConstant: 100),
             self.buttonsBackgroundView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 50),
             self.buttonsBackgroundView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -25)
-
-
+            
+            
         ])
     }
     
@@ -115,8 +140,8 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     func mapView(
         _ mapView: MKMapView,
         viewFor annotation: MKAnnotation
-        ) -> MKAnnotationView? {
-                    
+    ) -> MKAnnotationView? {
+        
         let customAnnotation: MKAnnotation
         
         if tipo == .bioma {
@@ -124,14 +149,14 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         } else {
             customAnnotation = annotation as! EstateArtwork
         }
-            
-                      // 3
+        
+        // 3
         let identifier = "artwork"
         var view: MKMarkerAnnotationView
-
+        
         view = MKMarkerAnnotationView(
-        annotation: customAnnotation,
-        reuseIdentifier: identifier)
+            annotation: customAnnotation,
+            reuseIdentifier: identifier)
         view.canShowCallout = true
         view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
         view.rightCalloutAccessoryView?.tintColor = UIColor(named: "mygreen")
@@ -139,75 +164,75 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     }
     
     //Função de click
-   func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         if tipo == .bioma {
-        guard let artwork = view.annotation as? Artwork else {
-          return
+            guard let artwork = view.annotation as? Artwork else {
+                return
+            }
+            MapViewController.b = artwork.number ?? -1
+            let vc = InfoBiomaViewController()
+            vc.modalPresentationStyle = .fullScreen
+            present(vc, animated: true, completion: nil)
+        } else {
+            guard let estateArtwork = view.annotation as? EstateArtwork else{
+                return
+            }
+            MapViewController.b = estateArtwork.number ?? -1
+            let vc = InfoDesmatamentoViewController()
+            vc.modalPresentationStyle = .fullScreen
+            present(vc, animated: true, completion: nil)
         }
-        MapViewController.b = artwork.number ?? -1
-        let vc = InfoBiomaViewController()
-        vc.modalPresentationStyle = .fullScreen
-        present(vc, animated: true, completion: nil)
-    } else {
-        guard let estateArtwork = view.annotation as? EstateArtwork else{
-          return
-        }
-        MapViewController.b = estateArtwork.number ?? -1
-        let vc = InfoDesmatamentoViewController()
-        vc.modalPresentationStyle = .fullScreen
-        present(vc, animated: true, completion: nil)
+        
     }
     
-}
-        
-//Gera polígono
-   func mapView(_ map: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
-           if overlay is MKPolygon {
-               let polygonView = MKPolygonRenderer(overlay: overlay)
-
-                if tipo == .bioma {
-                    
-                    switch biomas  {
-                        case .amazonia:
-                            polygonView.fillColor = UIColor(red: 0.0196, green: 0.447, blue: 0.0039, alpha: 1)
-                            polygonView.strokeColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
-                        case .pampa:
-                            polygonView.fillColor = UIColor(red: 0.011, green: 0.105, blue: 0.996, alpha: 0.5)
-                            polygonView.strokeColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
-                        case .pantanal:
-                            polygonView.fillColor = UIColor(red: 0.976, green: 0.756, blue: 0.341, alpha: 1)
-                            polygonView.strokeColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
-                        case .caatinga:
-                            polygonView.fillColor = UIColor(red: 0.7, green: 0.3, blue: 0.3, alpha: 1)
-                            polygonView.strokeColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
-                        case .cerrado:
-                            polygonView.fillColor = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5)
-                            polygonView.strokeColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
-                        case .mataAtlantica:
-                            polygonView.fillColor = UIColor(red: 0.478, green: 0.384, blue: 0.286, alpha: 1)
-                            polygonView.strokeColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
-                        }
-                    
-                    return polygonView
-                } else {
-                    polygonView.fillColor = UIColor(red: 0.75, green: 0.75, blue: 0.75, alpha: 1)
-                    polygonView.strokeColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
-
-                    return polygonView
+    //Gera polígono
+    func mapView(_ map: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        if overlay is MKPolygon {
+            let polygonView = MKPolygonRenderer(overlay: overlay)
+            
+            if tipo == .bioma {
+                
+                switch biomas  {
+                case .amazonia:
+                    polygonView.fillColor = UIColor(red: 0.0196, green: 0.447, blue: 0.0039, alpha: 1)
+                    polygonView.strokeColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
+                case .pampa:
+                    polygonView.fillColor = UIColor(red: 0.011, green: 0.105, blue: 0.996, alpha: 0.5)
+                    polygonView.strokeColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
+                case .pantanal:
+                    polygonView.fillColor = UIColor(red: 0.976, green: 0.756, blue: 0.341, alpha: 1)
+                    polygonView.strokeColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
+                case .caatinga:
+                    polygonView.fillColor = UIColor(red: 0.7, green: 0.3, blue: 0.3, alpha: 1)
+                    polygonView.strokeColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
+                case .cerrado:
+                    polygonView.fillColor = UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 0.5)
+                    polygonView.strokeColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
+                case .mataAtlantica:
+                    polygonView.fillColor = UIColor(red: 0.478, green: 0.384, blue: 0.286, alpha: 1)
+                    polygonView.strokeColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
                 }
-
-           }
-
+                
+                return polygonView
+            } else {
+                polygonView.fillColor = UIColor(red: 0.75, green: 0.75, blue: 0.75, alpha: 1)
+                polygonView.strokeColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+                
+                return polygonView
+            }
+            
+        }
+        
         return MKOverlayRenderer()
     }
-//
-//    Adiciona o overlay para a addBoundary
+    //
+    //    Adiciona o overlay para a addBoundary
     func addOverlay() {
         let overlay = BrasilMapOverlay(brasil: brasil)
         mapView.addOverlay(overlay)
     }
     
-
+    
     //Adiciona as coordenadas onde o será feita a marcação de biomas
     func addBiomaBoundary() {
         while biomas == .amazonia {
@@ -239,14 +264,14 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     
     //Adiciona as coordenadas onde será feita a marcações de estado
     func addEstadoBoundary() {
-//        mapView.addOverlay(MKPolygon(coordinates: brasil.Amazonas, count: brasil.Amazonas.count))
+        //        mapView.addOverlay(MKPolygon(coordinates: brasil.Amazonas, count: brasil.Amazonas.count))
     }
     
     
     //Button que muda o filtro por enquanto
     @objc func buttonActionArrow(sender: UIButton!) {
         print("Clicked")
-
+        
     }
     
     
