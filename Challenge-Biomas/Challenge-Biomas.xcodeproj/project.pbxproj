@@ -3,45 +3,250 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A0D11302497C19A00672983 /* BrasilCoord.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3A0D112F2497C19A00672983 /* BrasilCoord.plist */; };
+		3A0D11342497D8AC00672983 /* Brasil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0D11332497D8AC00672983 /* Brasil.swift */; };
+		3A0D11362497D9D600672983 /* BrasilMapOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0D11352497D9D600672983 /* BrasilMapOverlay.swift */; };
+		3A0D113D2498F6AE00672983 /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0D113C2498F6AE00672983 /* Artwork.swift */; };
+		3A0D1198249B0F4900672983 /* EstateArtwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0D1197249B0F4900672983 /* EstateArtwork.swift */; };
+		4FEDF0D52FBCDA0A3108DDB4 /* Pods_Challenge_BiomasTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B50EC0D447141494D3D9C868 /* Pods_Challenge_BiomasTests.framework */; };
+		6CA4576D9FDC9088BAAEB5B4 /* Pods_Challenge_Biomas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14062AB3FD02C5C34AD79C49 /* Pods_Challenge_Biomas.framework */; };
+		8805884824A9265C00095030 /* GetAllGraphicsDataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8805884724A9265C00095030 /* GetAllGraphicsDataTest.swift */; };
+		8816EA0724A54242004DA668 /* LoaderJsonTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8816EA0624A54242004DA668 /* LoaderJsonTest.swift */; };
+		8816EA0924A545A3004DA668 /* LoadGeoJsonTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8816EA0824A545A3004DA668 /* LoadGeoJsonTest.swift */; };
+		8816EA0B24A545ED004DA668 /* LoadGeoJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8816EA0A24A545ED004DA668 /* LoadGeoJson.swift */; };
+		884964A62497EF52000B86DF /* Bioma.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884964A52497EF52000B86DF /* Bioma.swift */; };
+		884964A92497F12C000B86DF /* BiomasData.json in Resources */ = {isa = PBXBuildFile; fileRef = 884964A82497F12C000B86DF /* BiomasData.json */; };
+		884964AD24980071000B86DF /* InfoBiomaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884964AC24980071000B86DF /* InfoBiomaViewController.swift */; };
+		884964AF249814DE000B86DF /* UiViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884964AE249814DE000B86DF /* UiViewExt.swift */; };
+		884964B12498F545000B86DF /* InfoGeraisCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884964B02498F545000B86DF /* InfoGeraisCell.swift */; };
+		884964B924991395000B86DF /* InfoEspecificaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884964B824991395000B86DF /* InfoEspecificaCell.swift */; };
+		884964BD249A984E000B86DF /* InfoGeraisXib.xib in Resources */ = {isa = PBXBuildFile; fileRef = 884964BC249A984E000B86DF /* InfoGeraisXib.xib */; };
+		88521BE524A5308200058BD9 /* InfoDesmatamentoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88521BE424A5308200058BD9 /* InfoDesmatamentoViewController.swift */; };
+		88521BE724A5312B00058BD9 /* Estado.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88521BE624A5312B00058BD9 /* Estado.swift */; };
+		88521BE924A5318000058BD9 /* InfoGraphicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88521BE824A5318000058BD9 /* InfoGraphicTableViewCell.swift */; };
+		88521BEB24A531AB00058BD9 /* TableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88521BEA24A531AB00058BD9 /* TableViewHeader.swift */; };
+		88521BED24A5322C00058BD9 /* EstadosData.json in Resources */ = {isa = PBXBuildFile; fileRef = 88521BEC24A5322C00058BD9 /* EstadosData.json */; };
+		88BAD32F24A52786003BE19F /* LoaderJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BAD32E24A52786003BE19F /* LoaderJson.swift */; };
+		88BAD33124A527EA003BE19F /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BAD33024A527EA003BE19F /* HeaderView.swift */; };
+		88ECF70124A3DBD200148CCB /* Challenge_BiomasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88ECF70024A3DBD200148CCB /* Challenge_BiomasTests.swift */; };
+		CE11800924A4F44C003A24CE /* NetworkingRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11800824A4F44C003A24CE /* NetworkingRequest.swift */; };
+		CE11800C24A4F48F003A24CE /* InformationProds.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11800B24A4F48F003A24CE /* InformationProds.swift */; };
+		CE11801124A552F7003A24CE /* LegendasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11800D24A552F7003A24CE /* LegendasViewController.swift */; };
+		CE11801224A552F7003A24CE /* GroupLegendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11800E24A552F7003A24CE /* GroupLegendsView.swift */; };
+		CE11801324A552F7003A24CE /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE11800F24A552F7003A24CE /* MapViewController.swift */; };
+		CE11801424A552F7003A24CE /* (null) in Sources */ = {isa = PBXBuildFile; };
+		CE11801624A553A8003A24CE /* BioPoints.geojson in Resources */ = {isa = PBXBuildFile; fileRef = CE11801524A553A8003A24CE /* BioPoints.geojson */; };
+		CE11801824A553BA003A24CE /* EstatePoints.geojson in Resources */ = {isa = PBXBuildFile; fileRef = CE11801724A553BA003A24CE /* EstatePoints.geojson */; };
 		CEAC8B892492B70E0066F793 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAC8B882492B70E0066F793 /* AppDelegate.swift */; };
 		CEAC8B8B2492B70E0066F793 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAC8B8A2492B70E0066F793 /* SceneDelegate.swift */; };
-		CEAC8B8D2492B70E0066F793 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAC8B8C2492B70E0066F793 /* ViewController.swift */; };
-		CEAC8B902492B70E0066F793 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEAC8B8E2492B70E0066F793 /* Main.storyboard */; };
 		CEAC8B922492B7130066F793 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEAC8B912492B7130066F793 /* Assets.xcassets */; };
 		CEAC8B952492B7130066F793 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEAC8B932492B7130066F793 /* LaunchScreen.storyboard */; };
+		CED1CCC824A6899200453C68 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED1CCC724A6899200453C68 /* ItemView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		88ECF70324A3DBD200148CCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEAC8B7D2492B70E0066F793 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CEAC8B842492B70E0066F793;
+			remoteInfo = "Challenge-Biomas";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		14062AB3FD02C5C34AD79C49 /* Pods_Challenge_Biomas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Challenge_Biomas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A0D112F2497C19A00672983 /* BrasilCoord.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = BrasilCoord.plist; sourceTree = "<group>"; };
+		3A0D11332497D8AC00672983 /* Brasil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brasil.swift; sourceTree = "<group>"; };
+		3A0D11352497D9D600672983 /* BrasilMapOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrasilMapOverlay.swift; sourceTree = "<group>"; };
+		3A0D113C2498F6AE00672983 /* Artwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
+		3A0D1197249B0F4900672983 /* EstateArtwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstateArtwork.swift; sourceTree = "<group>"; };
+		621AAA6EE60670471D2A8DA6 /* Pods-Challenge-Biomas.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Challenge-Biomas.release.xcconfig"; path = "Target Support Files/Pods-Challenge-Biomas/Pods-Challenge-Biomas.release.xcconfig"; sourceTree = "<group>"; };
+		8805884724A9265C00095030 /* GetAllGraphicsDataTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllGraphicsDataTest.swift; sourceTree = "<group>"; };
+		8816EA0624A54242004DA668 /* LoaderJsonTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderJsonTest.swift; sourceTree = "<group>"; };
+		8816EA0824A545A3004DA668 /* LoadGeoJsonTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadGeoJsonTest.swift; sourceTree = "<group>"; };
+		8816EA0A24A545ED004DA668 /* LoadGeoJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadGeoJson.swift; sourceTree = "<group>"; };
+		884964A52497EF52000B86DF /* Bioma.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bioma.swift; sourceTree = "<group>"; };
+		884964A82497F12C000B86DF /* BiomasData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BiomasData.json; sourceTree = "<group>"; };
+		884964AC24980071000B86DF /* InfoBiomaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoBiomaViewController.swift; sourceTree = "<group>"; };
+		884964AE249814DE000B86DF /* UiViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiViewExt.swift; sourceTree = "<group>"; };
+		884964B02498F545000B86DF /* InfoGeraisCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoGeraisCell.swift; sourceTree = "<group>"; };
+		884964B824991395000B86DF /* InfoEspecificaCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoEspecificaCell.swift; sourceTree = "<group>"; };
+		884964BC249A984E000B86DF /* InfoGeraisXib.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoGeraisXib.xib; sourceTree = "<group>"; };
+		88521BE424A5308200058BD9 /* InfoDesmatamentoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoDesmatamentoViewController.swift; sourceTree = "<group>"; };
+		88521BE624A5312B00058BD9 /* Estado.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Estado.swift; sourceTree = "<group>"; };
+		88521BE824A5318000058BD9 /* InfoGraphicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoGraphicTableViewCell.swift; sourceTree = "<group>"; };
+		88521BEA24A531AB00058BD9 /* TableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewHeader.swift; sourceTree = "<group>"; };
+		88521BEC24A5322C00058BD9 /* EstadosData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = EstadosData.json; sourceTree = "<group>"; };
+		88BAD32E24A52786003BE19F /* LoaderJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderJson.swift; sourceTree = "<group>"; };
+		88BAD33024A527EA003BE19F /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		88ECF6FE24A3DBD200148CCB /* Challenge-BiomasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Challenge-BiomasTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		88ECF70024A3DBD200148CCB /* Challenge_BiomasTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge_BiomasTests.swift; sourceTree = "<group>"; };
+		88ECF70224A3DBD200148CCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B50EC0D447141494D3D9C868 /* Pods_Challenge_BiomasTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Challenge_BiomasTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CABE716A5BD544005CB4C058 /* Pods-Challenge-Biomas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Challenge-Biomas.debug.xcconfig"; path = "Target Support Files/Pods-Challenge-Biomas/Pods-Challenge-Biomas.debug.xcconfig"; sourceTree = "<group>"; };
+		CE11800824A4F44C003A24CE /* NetworkingRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingRequest.swift; sourceTree = "<group>"; };
+		CE11800B24A4F48F003A24CE /* InformationProds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationProds.swift; sourceTree = "<group>"; };
+		CE11800D24A552F7003A24CE /* LegendasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LegendasViewController.swift; sourceTree = "<group>"; };
+		CE11800E24A552F7003A24CE /* GroupLegendsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupLegendsView.swift; sourceTree = "<group>"; };
+		CE11800F24A552F7003A24CE /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		CE11801524A553A8003A24CE /* BioPoints.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BioPoints.geojson; sourceTree = "<group>"; };
+		CE11801724A553BA003A24CE /* EstatePoints.geojson */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EstatePoints.geojson; sourceTree = "<group>"; };
 		CEAC8B852492B70E0066F793 /* Challenge-Biomas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Challenge-Biomas.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEAC8B882492B70E0066F793 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEAC8B8A2492B70E0066F793 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CEAC8B8C2492B70E0066F793 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CEAC8B8F2492B70E0066F793 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CEAC8B912492B7130066F793 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEAC8B942492B7130066F793 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEAC8B962492B7130066F793 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CED1CCC724A6899200453C68 /* ItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
+		DD4D343A75461BE8E0D3CDBD /* Pods-Challenge-BiomasTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Challenge-BiomasTests.release.xcconfig"; path = "Target Support Files/Pods-Challenge-BiomasTests/Pods-Challenge-BiomasTests.release.xcconfig"; sourceTree = "<group>"; };
+		EA454843983CCD0BC665C6F6 /* Pods-Challenge-BiomasTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Challenge-BiomasTests.debug.xcconfig"; path = "Target Support Files/Pods-Challenge-BiomasTests/Pods-Challenge-BiomasTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		88ECF6FB24A3DBD200148CCB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FEDF0D52FBCDA0A3108DDB4 /* Pods_Challenge_BiomasTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CEAC8B822492B70E0066F793 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CA4576D9FDC9088BAAEB5B4 /* Pods_Challenge_Biomas.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		060D7BFE0D8873128C585859 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CABE716A5BD544005CB4C058 /* Pods-Challenge-Biomas.debug.xcconfig */,
+				621AAA6EE60670471D2A8DA6 /* Pods-Challenge-Biomas.release.xcconfig */,
+				EA454843983CCD0BC665C6F6 /* Pods-Challenge-BiomasTests.debug.xcconfig */,
+				DD4D343A75461BE8E0D3CDBD /* Pods-Challenge-BiomasTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		3A0D112E2497C11000672983 /* infomation */ = {
+			isa = PBXGroup;
+			children = (
+				3A0D112F2497C19A00672983 /* BrasilCoord.plist */,
+			);
+			path = infomation;
+			sourceTree = "<group>";
+		};
+		3A0D11312497D61800672983 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				884964A52497EF52000B86DF /* Bioma.swift */,
+				3A0D11332497D8AC00672983 /* Brasil.swift */,
+				3A0D113C2498F6AE00672983 /* Artwork.swift */,
+				3A0D1197249B0F4900672983 /* EstateArtwork.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3A0D11322497D64000672983 /* Overlays */ = {
+			isa = PBXGroup;
+			children = (
+				3A0D11352497D9D600672983 /* BrasilMapOverlay.swift */,
+			);
+			path = Overlays;
+			sourceTree = "<group>";
+		};
+		884964EE24A27F89000B86DF /* InformaçõesControllers */ = {
+			isa = PBXGroup;
+			children = (
+				88BAD33024A527EA003BE19F /* HeaderView.swift */,
+				884964AC24980071000B86DF /* InfoBiomaViewController.swift */,
+				884964B02498F545000B86DF /* InfoGeraisCell.swift */,
+				884964B824991395000B86DF /* InfoEspecificaCell.swift */,
+			);
+			name = "InformaçõesControllers";
+			path = "InformaçõesControllers";
+			sourceTree = "<group>";
+		};
+		884964EF24A27FCF000B86DF /* DadosJson */ = {
+			isa = PBXGroup;
+			children = (
+				884964A82497F12C000B86DF /* BiomasData.json */,
+				CE11801724A553BA003A24CE /* EstatePoints.geojson */,
+				CE11801524A553A8003A24CE /* BioPoints.geojson */,
+				88521BEC24A5322C00058BD9 /* EstadosData.json */,
+			);
+			path = DadosJson;
+			sourceTree = "<group>";
+		};
+		884964F024A27FFD000B86DF /* MapaControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CED1CCC724A6899200453C68 /* ItemView.swift */,
+				CE11800E24A552F7003A24CE /* GroupLegendsView.swift */,
+				CE11800D24A552F7003A24CE /* LegendasViewController.swift */,
+				CE11800F24A552F7003A24CE /* MapViewController.swift */,
+			);
+			path = MapaControllers;
+			sourceTree = "<group>";
+		};
+		88521BE324A52FDB00058BD9 /* InfoDesmatamentoControllers */ = {
+			isa = PBXGroup;
+			children = (
+				88521BE424A5308200058BD9 /* InfoDesmatamentoViewController.swift */,
+				88521BE824A5318000058BD9 /* InfoGraphicTableViewCell.swift */,
+				88521BEA24A531AB00058BD9 /* TableViewHeader.swift */,
+			);
+			path = InfoDesmatamentoControllers;
+			sourceTree = "<group>";
+		};
+		88ECF6FF24A3DBD200148CCB /* Challenge-BiomasTests */ = {
+			isa = PBXGroup;
+			children = (
+				8805884724A9265C00095030 /* GetAllGraphicsDataTest.swift */,
+				8816EA0624A54242004DA668 /* LoaderJsonTest.swift */,
+				8816EA0824A545A3004DA668 /* LoadGeoJsonTest.swift */,
+				88ECF70024A3DBD200148CCB /* Challenge_BiomasTests.swift */,
+				88ECF70224A3DBD200148CCB /* Info.plist */,
+			);
+			path = "Challenge-BiomasTests";
+			sourceTree = "<group>";
+		};
+		909568AB09FFFC6ADBE1BA60 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				14062AB3FD02C5C34AD79C49 /* Pods_Challenge_Biomas.framework */,
+				B50EC0D447141494D3D9C868 /* Pods_Challenge_BiomasTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE11800A24A4F463003A24CE /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				CE11800824A4F44C003A24CE /* NetworkingRequest.swift */,
+				CE11800B24A4F48F003A24CE /* InformationProds.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		CEAC8B7C2492B70E0066F793 = {
 			isa = PBXGroup;
 			children = (
 				CEAC8B872492B70E0066F793 /* Challenge-Biomas */,
+				88ECF6FF24A3DBD200148CCB /* Challenge-BiomasTests */,
 				CEAC8B862492B70E0066F793 /* Products */,
+				060D7BFE0D8873128C585859 /* Pods */,
+				909568AB09FFFC6ADBE1BA60 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -49,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				CEAC8B852492B70E0066F793 /* Challenge-Biomas.app */,
+				88ECF6FE24A3DBD200148CCB /* Challenge-BiomasTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,13 +262,24 @@
 		CEAC8B872492B70E0066F793 /* Challenge-Biomas */ = {
 			isa = PBXGroup;
 			children = (
+				88521BE324A52FDB00058BD9 /* InfoDesmatamentoControllers */,
+				3A0D11322497D64000672983 /* Overlays */,
+				3A0D11312497D61800672983 /* Models */,
+				3A0D112E2497C11000672983 /* infomation */,
+				CE11800A24A4F463003A24CE /* Networking */,
 				CEAC8B882492B70E0066F793 /* AppDelegate.swift */,
 				CEAC8B8A2492B70E0066F793 /* SceneDelegate.swift */,
-				CEAC8B8C2492B70E0066F793 /* ViewController.swift */,
-				CEAC8B8E2492B70E0066F793 /* Main.storyboard */,
+				884964EE24A27F89000B86DF /* InformaçõesControllers */,
+				884964F024A27FFD000B86DF /* MapaControllers */,
+				884964EF24A27FCF000B86DF /* DadosJson */,
 				CEAC8B912492B7130066F793 /* Assets.xcassets */,
 				CEAC8B932492B7130066F793 /* LaunchScreen.storyboard */,
 				CEAC8B962492B7130066F793 /* Info.plist */,
+				884964BC249A984E000B86DF /* InfoGeraisXib.xib */,
+				884964AE249814DE000B86DF /* UiViewExt.swift */,
+				8816EA0A24A545ED004DA668 /* LoadGeoJson.swift */,
+				88BAD32E24A52786003BE19F /* LoaderJson.swift */,
+				88521BE624A5312B00058BD9 /* Estado.swift */,
 			);
 			path = "Challenge-Biomas";
 			sourceTree = "<group>";
@@ -70,13 +287,34 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		88ECF6FD24A3DBD200148CCB /* Challenge-BiomasTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 88ECF70724A3DBD200148CCB /* Build configuration list for PBXNativeTarget "Challenge-BiomasTests" */;
+			buildPhases = (
+				7D75A019AEE65ADD2BB0FFFC /* [CP] Check Pods Manifest.lock */,
+				88ECF6FA24A3DBD200148CCB /* Sources */,
+				88ECF6FB24A3DBD200148CCB /* Frameworks */,
+				88ECF6FC24A3DBD200148CCB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				88ECF70424A3DBD200148CCB /* PBXTargetDependency */,
+			);
+			name = "Challenge-BiomasTests";
+			productName = "Challenge-BiomasTests";
+			productReference = 88ECF6FE24A3DBD200148CCB /* Challenge-BiomasTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		CEAC8B842492B70E0066F793 /* Challenge-Biomas */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CEAC8B992492B7130066F793 /* Build configuration list for PBXNativeTarget "Challenge-Biomas" */;
 			buildPhases = (
+				4698B7DD483789B32BE6F0CC /* [CP] Check Pods Manifest.lock */,
 				CEAC8B812492B70E0066F793 /* Sources */,
 				CEAC8B822492B70E0066F793 /* Frameworks */,
 				CEAC8B832492B70E0066F793 /* Resources */,
+				7F48466CCF7A9E5609764A69 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -97,6 +335,10 @@
 				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = "Alley Pereira";
 				TargetAttributes = {
+					88ECF6FD24A3DBD200148CCB = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = CEAC8B842492B70E0066F793;
+					};
 					CEAC8B842492B70E0066F793 = {
 						CreatedOnToolsVersion = 11.5;
 					};
@@ -116,45 +358,157 @@
 			projectRoot = "";
 			targets = (
 				CEAC8B842492B70E0066F793 /* Challenge-Biomas */,
+				88ECF6FD24A3DBD200148CCB /* Challenge-BiomasTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		88ECF6FC24A3DBD200148CCB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CEAC8B832492B70E0066F793 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				884964BD249A984E000B86DF /* InfoGeraisXib.xib in Resources */,
+				884964A92497F12C000B86DF /* BiomasData.json in Resources */,
+				3A0D11302497C19A00672983 /* BrasilCoord.plist in Resources */,
+				88521BED24A5322C00058BD9 /* EstadosData.json in Resources */,
 				CEAC8B952492B7130066F793 /* LaunchScreen.storyboard in Resources */,
 				CEAC8B922492B7130066F793 /* Assets.xcassets in Resources */,
-				CEAC8B902492B70E0066F793 /* Main.storyboard in Resources */,
+				CE11801824A553BA003A24CE /* EstatePoints.geojson in Resources */,
+				CE11801624A553A8003A24CE /* BioPoints.geojson in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4698B7DD483789B32BE6F0CC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Challenge-Biomas-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7D75A019AEE65ADD2BB0FFFC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Challenge-BiomasTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F48466CCF7A9E5609764A69 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Challenge-Biomas/Pods-Challenge-Biomas-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Challenge-Biomas/Pods-Challenge-Biomas-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Challenge-Biomas/Pods-Challenge-Biomas-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		88ECF6FA24A3DBD200148CCB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8816EA0724A54242004DA668 /* LoaderJsonTest.swift in Sources */,
+				8816EA0924A545A3004DA668 /* LoadGeoJsonTest.swift in Sources */,
+				88ECF70124A3DBD200148CCB /* Challenge_BiomasTests.swift in Sources */,
+				8805884824A9265C00095030 /* GetAllGraphicsDataTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CEAC8B812492B70E0066F793 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEAC8B8D2492B70E0066F793 /* ViewController.swift in Sources */,
+				884964AF249814DE000B86DF /* UiViewExt.swift in Sources */,
 				CEAC8B892492B70E0066F793 /* AppDelegate.swift in Sources */,
+				88521BEB24A531AB00058BD9 /* TableViewHeader.swift in Sources */,
+				88521BE724A5312B00058BD9 /* Estado.swift in Sources */,
+				884964B924991395000B86DF /* InfoEspecificaCell.swift in Sources */,
+				CE11801324A552F7003A24CE /* MapViewController.swift in Sources */,
+				CE11801424A552F7003A24CE /* (null) in Sources */,
+				884964AD24980071000B86DF /* InfoBiomaViewController.swift in Sources */,
+				884964A62497EF52000B86DF /* Bioma.swift in Sources */,
+				884964B12498F545000B86DF /* InfoGeraisCell.swift in Sources */,
+				88BAD33124A527EA003BE19F /* HeaderView.swift in Sources */,
+				8816EA0B24A545ED004DA668 /* LoadGeoJson.swift in Sources */,
+				88BAD32F24A52786003BE19F /* LoaderJson.swift in Sources */,
+				88521BE524A5308200058BD9 /* InfoDesmatamentoViewController.swift in Sources */,
+				88521BE924A5318000058BD9 /* InfoGraphicTableViewCell.swift in Sources */,
+				CEAC8B892492B70E0066F793 /* AppDelegate.swift in Sources */,
+				CE11801124A552F7003A24CE /* LegendasViewController.swift in Sources */,
+				3A0D1198249B0F4900672983 /* EstateArtwork.swift in Sources */,
+				3A0D11342497D8AC00672983 /* Brasil.swift in Sources */,
+				CE11800924A4F44C003A24CE /* NetworkingRequest.swift in Sources */,
+				CE11801224A552F7003A24CE /* GroupLegendsView.swift in Sources */,
+				CE11800C24A4F48F003A24CE /* InformationProds.swift in Sources */,
+				CED1CCC824A6899200453C68 /* ItemView.swift in Sources */,
+				3A0D11362497D9D600672983 /* BrasilMapOverlay.swift in Sources */,
+				CEAC8B892492B70E0066F793 /* AppDelegate.swift in Sources */,
+				3A0D113D2498F6AE00672983 /* Artwork.swift in Sources */,
 				CEAC8B8B2492B70E0066F793 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		CEAC8B8E2492B70E0066F793 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CEAC8B8F2492B70E0066F793 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
+/* Begin PBXTargetDependency section */
+		88ECF70424A3DBD200148CCB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CEAC8B842492B70E0066F793 /* Challenge-Biomas */;
+			targetProxy = 88ECF70324A3DBD200148CCB /* PBXContainerItemProxy */;
 		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
 		CEAC8B932492B7130066F793 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -166,6 +520,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		88ECF70524A3DBD200148CCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA454843983CCD0BC665C6F6 /* Pods-Challenge-BiomasTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BYHH9YALN2;
+				INFOPLIST_FILE = "Challenge-BiomasTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "academy.Challenge-BiomasTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Challenge-Biomas.app/Challenge-Biomas";
+			};
+			name = Debug;
+		};
+		88ECF70624A3DBD200148CCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD4D343A75461BE8E0D3CDBD /* Pods-Challenge-BiomasTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BYHH9YALN2;
+				INFOPLIST_FILE = "Challenge-BiomasTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "academy.Challenge-BiomasTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Challenge-Biomas.app/Challenge-Biomas";
+			};
+			name = Release;
+		};
 		CEAC8B972492B7130066F793 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -282,9 +678,11 @@
 		};
 		CEAC8B9A2492B7130066F793 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CABE716A5BD544005CB4C058 /* Pods-Challenge-Biomas.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Challenge-Biomas/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -293,15 +691,17 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "alley.Challenge-Biomas";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		CEAC8B9B2492B7130066F793 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 621AAA6EE60670471D2A8DA6 /* Pods-Challenge-Biomas.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Challenge-Biomas/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -310,13 +710,22 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "alley.Challenge-Biomas";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		88ECF70724A3DBD200148CCB /* Build configuration list for PBXNativeTarget "Challenge-BiomasTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88ECF70524A3DBD200148CCB /* Debug */,
+				88ECF70624A3DBD200148CCB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CEAC8B802492B70E0066F793 /* Build configuration list for PBXProject "Challenge-Biomas" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

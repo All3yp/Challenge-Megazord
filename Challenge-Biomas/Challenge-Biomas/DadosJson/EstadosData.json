@@ -1,0 +1,81 @@
+[
+    {
+        "imagem": "amazonas",
+        "nome": "Amazonas"
+    },
+    {
+        "imagem": "acre",
+        "nome": "Acre"
+    },
+    {
+        "imagem": "rondonia",
+        "nome": "Rondônia"
+    },
+    {
+        "imagem": "para",
+        "nome": "Pará"
+    },
+    {
+        "imagem": "tocantins",
+        "nome": "Tocantins"
+    },
+    {
+        "imagem": "amapa",
+        "nome": "Amapá"
+    },
+    {
+        "imagem": "roraima",
+        "nome": "Roraima"
+    },
+    {
+        "imagem": "maranhao",
+        "nome": "Maranhão"
+    },
+    {
+        "imagem": "bahia",
+        "nome": "Bahia"
+    },
+    {
+        "imagem": "piaui",
+        "nome": "Piauí",
+    },
+    {
+        "imagem": "matogrosso",
+        "nome": "Mato Grosso"
+    },
+    {
+        "imagem": "matogrossodosul",
+        "nome": "Mato Grosso do Sul"
+    },
+    {
+        "imagem": "goias",
+        "nome": "Goiás"
+
+    },
+    {
+        "imagem": "distritofederal",
+        "nome": "Distrito Federal"
+
+    },
+    {
+        "imagem": "minasgerais",
+        "nome": "Minas Gerais"
+
+    },
+    {
+        "imagem": "saopaulo",
+        "nome": "São Paulo"
+    },
+    {
+        "imagem": "parana",
+        "nome": "Paraná"
+    },
+    {
+        "imagem": "santacatarina",
+        "nome": "Santa Catarina"
+    },
+    {
+        "imagem": "riograndedosul",
+        "nome": "Rio Grande do Sul"
+    },
+]
